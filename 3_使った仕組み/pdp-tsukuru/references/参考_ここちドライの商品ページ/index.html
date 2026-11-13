@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>店の土台（ここちドライの商品ページから）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+#kpdp{
+  --ac:#d6557c;       /* 強調（アルコットのオレンジの位置） */
+  --ac-d:#b83d63;
+  --plum:#6e2a47;     /* 帯・濃い面 */
+  --soft:#fdf0f4;     /* 薄い面 */
+  --line:#f1c9d6;
+  --ink:#1d1a1b;
+  --mute:#6f6669;
+  --gold:#e3a51b;
+  --ok:#1f8a4c;
+}#kpdp, #kpdp *{box-sizing:border-box;margin:0;padding:0}#kpdp{-webkit-text-size-adjust:100%}#kpdp{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;color:var(--ink);background:#fff;letter-spacing:.06em;line-height:1.7;font-weight:500;overflow-x:hidden}#kpdp img,#kpdp video{display:block;max-width:100%}#kpdp button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;letter-spacing:inherit}#kpdp a{color:inherit}#kpdp .wrap{max-width:1120px;margin:0 auto;padding:0 16px}#kpdp .em{color:var(--ac)}#kpdp h2.sec{font-size:30px;font-weight:900;text-align:center;line-height:1.35;letter-spacing:.1em}#kpdp h2.sec+.lead{text-align:center;color:var(--ink);font-size:15px;margin-top:14px}#kpdp section{padding:56px 0}#kpdp .salebar{background:var(--plum);color:#fff;text-align:center;padding:8px 12px 7px}#kpdp .salebar .row{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:13px}#kpdp .salebar .t{display:flex;gap:6px;align-items:center}#kpdp .salebar .t b{background:#fff;color:var(--plum);border-radius:4px;min-width:30px;padding:1px 4px 0;font-size:16px;line-height:1.1;display:flex;flex-direction:column;align-items:center}#kpdp .salebar .t b small{font-size:8px;font-weight:700;letter-spacing:0}#kpdp .salebar p{font-size:12px;font-weight:700;margin-top:4px}#kpdp header.top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #f3eaee;background:#fff}#kpdp header.top .logo img{height:26px;width:auto}#kpdp header.top svg{width:24px;height:24px}#kpdp .buy{display:grid;grid-template-columns:minmax(0,1fr);gap:0;max-width:1180px;margin:0 auto}#kpdp .buy>*{min-width:0}#kpdp .gal{padding:12px 16px 0}#kpdp .gal .main{position:relative;border-radius:12px;overflow:hidden;background:var(--soft)}#kpdp .gal .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#kpdp .gal .track::-webkit-scrollbar{display:none}#kpdp .gal .track img{flex:0 0 100%;width:100%;aspect-ratio:1/1;object-fit:cover;scroll-snap-align:start}#kpdp .gal .dots{display:flex;justify-content:center;gap:8px;margin:10px 0 0}#kpdp .gal .dots i{width:7px;height:7px;border-radius:50%;background:#d8cdd1}#kpdp .gal .dots i.on{background:var(--ink)}#kpdp .gal .thumbs{display:none}#kpdp .gal .badge{position:absolute;left:12px;top:12px;background:#fff;color:var(--plum);border:2px solid var(--plum);border-radius:50%;width:74px;height:74px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:17px;line-height:1.05;letter-spacing:0;transform:rotate(-8deg)}#kpdp .gal .badge small{font-size:11px}#kpdp .info{padding:14px 16px 0}#kpdp .stars{display:flex;align-items:center;gap:8px;font-size:14px}#kpdp .stars .s{color:var(--gold);letter-spacing:1px;font-size:17px}#kpdp .stars a{text-decoration:underline;text-underline-offset:3px}#kpdp h1{font-size:23px;font-weight:900;line-height:1.45;margin-top:10px;letter-spacing:.12em}#kpdp h1 .bar{color:#c9bcc1;font-weight:500;margin:0 .15em}#kpdp .price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-top:10px}#kpdp .price .now{font-size:26px;font-weight:900;color:var(--ac);letter-spacing:.02em}#kpdp .price .was{font-size:16px;text-decoration:line-through;color:var(--ink);font-weight:700}#kpdp .price .day{font-size:14px;font-weight:700}#kpdp .saleline{font-size:13px;color:var(--ac);font-weight:700;margin-top:2px}#kpdp .checks{list-style:none;margin-top:10px}#kpdp .checks li{font-weight:700;font-size:15px;padding:2px 0}#kpdp .checks li:before{content:"✔";margin-right:6px}#kpdp .opt{margin-top:18px}#kpdp .opt .lab{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:700;margin-bottom:8px}#kpdp .opt .lab .cur{color:var(--mute);font-weight:500;margin-left:8px}#kpdp .opt .lab button{font-size:13px;text-decoration:underline;text-underline-offset:3px;font-weight:700;color:var(--plum)}#kpdp .kd-sizes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}#kpdp .kd-sizes button{border:1.5px solid #e2d6db;border-radius:8px;padding:10px 0;font-weight:700;font-size:15px;background:#fff}#kpdp .kd-sizes button.on{border-color:var(--plum);background:var(--soft);box-shadow:inset 0 0 0 1px var(--plum)}#kpdp .kd-sizes.shake{animation:shake .45s}
+@keyframes shake{0%,100%{transform:none}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}#kpdp .sizehint{font-size:12px;color:var(--mute);margin-top:6px}#kpdp .tiers{margin-top:20px;display:flex;flex-direction:column;gap:12px}#kpdp .tier{position:relative;border:1.5px solid var(--line);border-radius:14px;background:#fff;padding:14px 12px;cursor:pointer}#kpdp .tier.on{border:2px solid var(--ac);background:#fffafb}#kpdp .tier .ribbon{position:absolute;right:10px;top:-13px;background:var(--ac);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:12px;transform:rotate(3deg);letter-spacing:.04em;white-space:nowrap}#kpdp .tier .tag{position:absolute;left:12px;top:-11px;background:var(--plum);color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px}#kpdp .tier .row{display:grid;grid-template-columns:20px 52px 1fr auto;align-items:center;gap:10px}#kpdp .tier .rad{width:18px;height:18px;border-radius:50%;border:1.5px solid #cdbfc4}#kpdp .tier.on .rad{border:5px solid var(--ac)}#kpdp .tier .th{width:52px;height:52px;border-radius:8px;object-fit:cover;background:var(--soft)}#kpdp .tier .nm{font-weight:900;font-size:16px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}#kpdp .tier .off{background:var(--ac);color:#fff;border-radius:10px;font-size:11px;padding:1px 8px;font-weight:700}#kpdp .tier .save{font-size:12px;color:var(--mute);font-weight:700}#kpdp .tier .pr{text-align:right}#kpdp .tier .pr .per{font-size:18px;font-weight:900}#kpdp .tier .pr .per small{font-size:11px;font-weight:700;color:var(--mute)}#kpdp .tier .pr .perwas{font-size:11px;color:var(--mute);text-decoration:line-through}#kpdp .tier .pr .tot{font-size:12px;font-weight:700}#kpdp .tier .more{display:none;margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}#kpdp .tier.on .more{display:block}#kpdp .colors{display:flex;gap:12px}#kpdp .colors button{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;font-weight:700}#kpdp .colors img{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid #eee;background:#fff}#kpdp .colors button.on img{border:3px solid var(--plum)}#kpdp .tier .note{font-size:12px;color:var(--mute);margin-top:10px}#kpdp .gifts{margin-top:16px;background:var(--soft);border-radius:14px;padding:12px}#kpdp .gifts .h{display:flex;justify-content:space-between;font-weight:700;font-size:14px}#kpdp .gifts .h b{background:#fff;border-radius:10px;padding:0 10px;font-size:13px}#kpdp .gifts .g{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}#kpdp .gifts .g div{position:relative;background:#fff;border:1.5px solid var(--ac);border-radius:10px;text-align:center;padding:8px 2px 6px;font-size:11px;font-weight:700;line-height:1.35}#kpdp .gifts .g div.kd-lock{border-color:#e4dadd;opacity:.5}#kpdp .gifts .g div:after{content:"✓";position:absolute;right:-5px;top:-7px;width:18px;height:18px;border-radius:50%;background:var(--ac);color:#fff;font-size:11px;line-height:18px}#kpdp .gifts .g div.kd-lock:after{content:"🔒";background:#fff}#kpdp .gifts .g img{width:34px;height:34px;object-fit:cover;margin:0 auto 2px;border-radius:4px}#kpdp .gifts .g s{display:block;color:var(--mute);font-size:10px}#kpdp .gifts .g em{font-style:normal;color:var(--ac);font-size:13px;display:block}#kpdp .live{text-align:center;margin-top:18px;font-size:14px;font-weight:700}#kpdp .live i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#e02b2b;margin-right:6px;animation:pulse 1.4s infinite;vertical-align:1px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,43,43,.5)}70%{box-shadow:0 0 0 8px rgba(224,43,43,0)}100%{box-shadow:0 0 0 0 rgba(224,43,43,0)}}#kpdp .soldout{text-align:center;color:var(--ac);font-size:18px;font-weight:900;margin-top:4px}#kpdp .fine{text-align:center;font-size:13px;margin-top:4px}#kpdp .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border-radius:10px;padding:15px 12px;font-size:18px;font-weight:900;letter-spacing:.1em}#kpdp .btn.pri{background:var(--ac);color:#fff;box-shadow:0 4px 0 var(--ac-d)}#kpdp .btn.pri.wait{background:#eea9bd;box-shadow:0 4px 0 #dd8ea5}#kpdp .btn.blk{background:var(--ink);color:#fff;margin-top:10px;font-size:16px}#kpdp .atc{margin-top:16px}#kpdp .sub{text-align:center;font-size:12px;font-weight:700;margin-top:10px}#kpdp .pay{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:10px}#kpdp .pay span{border:1px solid #ddd;border-radius:4px;font-size:10px;font-weight:700;padding:3px 6px;letter-spacing:0}#kpdp .mail{display:block;text-align:center;font-size:13px;margin-top:12px;font-weight:700}#kpdp .mail b{color:var(--ac)}#kpdp .box{border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px;margin-top:14px;font-weight:700}#kpdp .trust{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;margin-top:22px;gap:6px}#kpdp .trust div{font-size:12px;font-weight:700;line-height:1.4}#kpdp .trust svg{width:34px;height:34px;margin:0 auto 6px;display:block}#kpdp .family{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;margin-top:20px;border-top:1px solid #f0e6ea;border-bottom:1px solid #f0e6ea;padding:14px 0}#kpdp .family img{width:110px;height:110px;object-fit:cover;border-radius:10px}#kpdp .family small{color:var(--ac);font-weight:700;font-size:12px}#kpdp .family h3{font-size:16px;font-weight:900;line-height:1.4}#kpdp .family p{font-size:13px;margin-top:4px}#kpdp .faq{margin-top:14px}#kpdp .faq details{border-bottom:1px solid #eee}#kpdp .faq summary{list-style:none;display:flex;align-items:center;gap:10px;padding:14px 2px;font-weight:700;font-size:15px;cursor:pointer}#kpdp .faq summary::-webkit-details-marker{display:none}#kpdp .faq summary .ic{width:20px;text-align:center;font-size:16px}#kpdp .faq summary:after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid #555;border-bottom:2px solid #555;transform:rotate(45deg);transition:.2s}#kpdp .faq details[open] summary:after{transform:rotate(-135deg)}#kpdp .faq .a{padding:0 4px 16px 32px;font-size:14px}#kpdp .faq .a b{color:var(--ac)}#kpdp .faq table{border-collapse:collapse;width:100%;font-size:12px;margin-top:8px}#kpdp .faq th,#kpdp .faq td{border:1px solid #eee;padding:4px;text-align:center}#kpdp .faq th{background:var(--soft)}#kpdp .mini{margin-top:22px;overflow:hidden}#kpdp .mini .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 4px}#kpdp .mini .track::-webkit-scrollbar{display:none}#kpdp .mini .c{flex:0 0 88%;scroll-snap-align:center;background:#f4f1f2;border-radius:14px;padding:12px;display:grid;grid-template-columns:78px 1fr;gap:12px}#kpdp .mini .c img{width:78px;height:78px;border-radius:8px;object-fit:cover}#kpdp .mini .c p{font-size:14px;font-weight:700;line-height:1.6}#kpdp .mini .c .who{font-size:12px;color:var(--mute);margin-top:6px;border-top:1px solid #e3dcdf;padding-top:4px}#kpdp .mini .c .who span{color:var(--gold)}#kpdp .mini .dots{display:flex;justify-content:center;gap:7px;margin-top:14px}#kpdp .mini .dots i{width:8px;height:8px;border-radius:50%;background:#d9d2d5}#kpdp .mini .dots i.on{background:var(--ac)}#kpdp .limited{text-align:center;margin-top:34px}#kpdp .limited h3{font-size:18px;font-weight:900}#kpdp .limited .cd{display:flex;justify-content:center;gap:10px;margin-top:8px}#kpdp .limited .cd div{display:flex;flex-direction:column;align-items:center;font-size:12px;font-weight:700}#kpdp .limited .cd b{background:var(--ac);color:#fff;font-size:30px;border-radius:8px;width:60px;line-height:1.3;padding:2px 0;letter-spacing:0}#kpdp .nostore{display:inline-block;border:2px solid var(--ac);color:var(--ac);font-weight:900;padding:4px 10px;margin-top:22px;font-size:15px}#kpdp .icons3{display:grid;grid-template-columns:repeat(3,1fr);margin-top:18px;text-align:center}#kpdp .icons3 div{font-weight:900;font-size:14px}#kpdp .icons3 .i{font-size:30px;line-height:1.2;color:var(--ac)}#kpdp .ticker{background:#000;color:#fff;overflow:hidden;white-space:nowrap;padding:9px 0}#kpdp .ticker .run{display:inline-flex;animation:tick var(--dur,30s) linear infinite}#kpdp .ticker span{font-weight:900;font-size:15px;padding:0 22px}
+@keyframes tick{to{transform:translateX(calc(-1 * var(--w,50%)))}}#kpdp .diff .ba{position:relative;max-width:560px;margin:26px auto 0;border-radius:14px;overflow:hidden;aspect-ratio:3/4;user-select:none;touch-action:pan-y}#kpdp .diff .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}#kpdp .diff .ba .aft{clip-path:inset(0 0 0 var(--x,50%))}#kpdp .diff .ba .ln{position:absolute;top:0;bottom:0;left:var(--x,50%);width:3px;background:#fff;transform:translateX(-50%)}#kpdp .diff .ba .knob{position:absolute;top:50%;left:var(--x,50%);transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--plum)}#kpdp .diff .ba .l,#kpdp .diff .ba .r{position:absolute;top:12px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;font-weight:700;padding:3px 10px;border-radius:14px}#kpdp .diff .ba .l{left:12px}#kpdp .diff .ba .r{right:12px;background:var(--ac)}#kpdp .diff .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}#kpdp .diff .cap{text-align:center;font-weight:900;font-size:17px;margin-top:14px;line-height:1.5}#kpdp .diff .cap small{display:block;font-size:13px;color:var(--mute);font-weight:700}#kpdp .diff .kd-tabs{display:flex;justify-content:center;gap:8px;margin-top:20px}#kpdp .diff .kd-tabs button{border:1.5px solid var(--line);border-radius:18px;padding:5px 14px;font-size:13px;font-weight:700}#kpdp .diff .kd-tabs button.on{background:var(--plum);border-color:var(--plum);color:#fff}#kpdp .feat{display:grid;grid-template-columns:1fr 1fr;gap:34px 18px;margin-top:40px}#kpdp .feat div{text-align:center}#kpdp .feat img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:var(--soft)}#kpdp .feat h3{font-size:17px;font-weight:900;margin-top:12px;line-height:1.4}#kpdp .feat p{font-size:13px;margin-top:6px;line-height:1.8}#kpdp .mech{margin-top:56px;border-top:1px solid #f0e6ea;padding-top:44px}#kpdp .mech h3{font-size:24px;font-weight:900;text-align:center;line-height:1.45;letter-spacing:.1em}#kpdp .mech .lead{text-align:center;font-size:14px;margin-top:12px}#kpdp .mech figure{margin:22px auto 0;max-width:760px}#kpdp .mech figure img{width:100%;border-radius:12px}#kpdp .mech figcaption{text-align:center;font-size:13px;font-weight:700;color:var(--mute);margin-top:8px}#kpdp .mech .say{text-align:center;font-size:20px;font-weight:900;margin-top:30px;line-height:1.6}#kpdp .steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:760px;margin:16px auto 0;text-align:center}#kpdp .steps3 b{display:block;font-size:15px;color:var(--plum)}#kpdp .steps3 span{font-size:12px;line-height:1.6;display:block}#kpdp .kd-slider{position:relative;margin-top:26px}#kpdp .kd-slider .track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 12%}#kpdp .kd-slider .track::-webkit-scrollbar{display:none}#kpdp .kd-slider .card{flex:0 0 76%;scroll-snap-align:center;border-radius:14px;overflow:hidden;background:#000}#kpdp .kd-slider .card img{width:100%;aspect-ratio:1/1;object-fit:cover}#kpdp .kd-slider .card .n{color:#fff;text-align:center;font-weight:700;padding:10px;font-size:15px}#kpdp .kd-slider .nav{position:absolute;top:45%;width:38px;height:38px;border-radius:50%;background:#111;color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:2}#kpdp .kd-slider .nav.p{left:8px}#kpdp .kd-slider .nav.n{right:8px}#kpdp .sdots{display:flex;justify-content:center;gap:7px;margin-top:14px}#kpdp .sdots i{width:8px;height:8px;border-radius:50%;background:#d9d2d5}#kpdp .sdots i.on{background:var(--ac)}#kpdp .people .card{flex:0 0 80%;scroll-snap-align:center;background:#f4f1f2;border-radius:20px;overflow:hidden}#kpdp .people .card img{width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:top}#kpdp .people .card .b{position:relative;padding:22px 18px 18px;text-align:center}#kpdp .people .card .q{position:absolute;right:18px;top:-24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font-size:34px;line-height:60px;font-weight:900}#kpdp .people .card .st{color:var(--gold);font-size:18px}#kpdp .people .card h4{font-size:15px;font-weight:900}#kpdp .people .card p{font-size:14px;text-align:left;margin-top:8px;line-height:1.85}#kpdp .people .card .nm{font-size:13px;font-weight:700;margin-top:10px;border-top:1px solid #e2dadd;padding-top:8px}#kpdp .stats .rows{max-width:640px;margin:26px auto 0}#kpdp .stats .r{display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #eee}#kpdp .stats .ring{width:72px;height:72px;border-radius:50%;background:conic-gradient(var(--ac) calc(var(--p)*1%),#f3dfe6 0);display:flex;align-items:center;justify-content:center;position:relative}#kpdp .stats .ring:before{content:"";position:absolute;inset:7px;background:#fff;border-radius:50%}#kpdp .stats .ring b{position:relative;color:var(--ac);font-size:17px;font-weight:900;letter-spacing:0}#kpdp .stats p{font-size:14px;line-height:1.8}#kpdp .stats p b{font-weight:900}#kpdp .stats .fn{font-size:12px;margin-top:12px;max-width:640px;margin-left:auto;margin-right:auto}#kpdp .cta{display:block;width:fit-content;margin:22px auto 0;background:var(--ac);color:#fff;font-weight:900;padding:12px 30px;border-radius:8px;text-decoration:none;letter-spacing:.12em}#kpdp .cmp table{width:100%;max-width:720px;margin:26px auto 0;border-collapse:separate;border-spacing:0;font-size:12px}#kpdp .cmp th,#kpdp .cmp td{padding:12px 4px;text-align:center;border-bottom:1px solid #eee}#kpdp .cmp td:first-child{text-align:left;font-weight:700;width:36%;padding-left:8px}#kpdp .cmp .us{background:var(--ac);color:#fff;width:18%}#kpdp .cmp thead .us{border-radius:14px 14px 0 0;font-weight:900;font-size:13px;padding-top:16px}#kpdp .cmp tbody tr:last-child .us{border-radius:0 0 14px 14px}#kpdp .cmp thead th{font-size:11px;font-weight:700;color:var(--mute);vertical-align:bottom}#kpdp .cmp thead .grp{font-size:10px;color:var(--mute);border:0;padding-bottom:0}#kpdp .cmp .y{font-size:17px;color:#fff}#kpdp .cmp .o{font-size:15px;color:#9a9396}#kpdp .cmp .x{font-size:15px;color:#c7c0c3}#kpdp .cmp .voice{max-width:720px;margin:18px auto 0;font-size:13px;line-height:1.9}#kpdp .cmp .voice small{display:block;color:#a39a9e;font-size:11px;margin-top:6px}#kpdp .cost{max-width:560px;margin:34px auto 0}#kpdp .cost h3{text-align:center;font-size:20px;font-weight:900;line-height:1.5}#kpdp .cost img{width:100%;border-radius:12px;margin-top:14px}#kpdp .care{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:720px;margin:34px auto 0}#kpdp .care img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}#kpdp .care b{display:block;font-size:14px;margin-top:6px}#kpdp .care span{font-size:11px;line-height:1.6;display:block}#kpdp .care-h{text-align:center;font-size:20px;font-weight:900;margin-top:44px}#kpdp .expert .card{max-width:640px;margin:26px auto 0;background:#f4f1f2;border-radius:20px;overflow:hidden}#kpdp .expert .card img.lab{width:100%;aspect-ratio:16/10;object-fit:cover}#kpdp .expert .b{position:relative;padding:26px 18px 18px;text-align:center}#kpdp .expert .q{position:absolute;right:18px;top:-24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font-size:34px;line-height:60px;font-weight:900}#kpdp .expert h4{font-size:16px;font-weight:900}#kpdp .expert p{font-size:15px;margin-top:10px;line-height:1.95;text-align:left}#kpdp .expert .by{font-weight:900;font-size:13px;margin-top:12px;border-top:1px solid #e0d8db;padding-top:10px}#kpdp .logos{display:flex;gap:14px;overflow:hidden;margin-top:18px;max-width:640px;margin-left:auto;margin-right:auto}#kpdp .logos .run{display:flex;gap:24px;animation:tick 26s linear infinite}#kpdp .logos img{height:34px;width:auto;flex:none}#kpdp .rv .sum{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:10px;font-size:14px}#kpdp .rv .sum .s{color:var(--ac);font-size:17px}#kpdp .rv .sum b{font-size:18px}#kpdp .rv .dist{max-width:360px;margin:14px auto 0;font-size:12px}#kpdp .rv .dist div{display:grid;grid-template-columns:32px 1fr 44px;gap:8px;align-items:center}#kpdp .rv .dist i{height:7px;background:#eee;border-radius:4px;overflow:hidden;display:block}#kpdp .rv .dist i:before{content:"";display:block;height:100%;width:var(--w);background:var(--ac)}#kpdp .rv .rvgrid{columns:2;column-gap:10px;margin-top:22px}#kpdp .rv .it{break-inside:avoid;border:1px solid #e8e8e8;margin-bottom:10px;background:#fff}#kpdp .rv .it img{width:100%;aspect-ratio:1/1;object-fit:cover}#kpdp .rv .it .ph{position:relative}#kpdp .rv .it .ph span{position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;padding:2px 6px}#kpdp .rv .it .b{padding:10px}#kpdp .rv .it h5{font-size:13px;font-weight:900}#kpdp .rv .it .who{font-size:11px;color:var(--mute)}#kpdp .rv .it .st{color:var(--ac);font-size:13px;margin-top:4px}#kpdp .rv .it .st em{font-style:normal;color:var(--ok);font-size:11px;margin-left:4px}#kpdp .rv .it .d{font-size:11px;color:var(--mute);margin-top:2px}#kpdp .rv .it p{font-size:13px;margin-top:8px;line-height:1.75}#kpdp .rv .it.hide{display:none}#kpdp .rv .more{display:block;margin:14px auto 0;border:1.5px solid #222;padding:10px 40px;font-size:14px;font-weight:700}#kpdp .rv .cnt{text-align:center;font-size:12px;color:var(--mute);margin-top:8px}#kpdp .guar{max-width:640px;margin:0 auto}#kpdp .guar img{width:100%;border-radius:12px}#kpdp .final{text-align:center}#kpdp .final h2{font-size:30px;font-weight:900}#kpdp .final p{font-size:15px;margin-top:14px;text-align:left}#kpdp .final .btn{margin-top:20px;border-radius:8px}#kpdp .final .out{margin-top:10px;border:1.5px solid var(--ac);color:var(--ac);border-radius:8px;padding:12px;display:block;font-weight:900;text-decoration:none}#kpdp footer{background:#000;color:#fff;text-align:center;padding:44px 16px 110px;font-size:13px}#kpdp footer h3{font-size:20px;font-weight:900}#kpdp footer form{display:flex;max-width:360px;margin:16px auto 0;border:1px solid #666;border-radius:8px;overflow:hidden}#kpdp footer input{flex:1;background:none;border:0;color:#fff;padding:12px;font:inherit}#kpdp footer form button{color:#fff;padding:0 14px}#kpdp footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:30px;font-size:12px}#kpdp footer nav a{text-decoration:none;color:#ddd}#kpdp .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -4px 16px rgba(0,0,0,.1);padding:10px 16px 8px;z-index:50;transform:translateY(110%);transition:transform .25s}#kpdp .sticky.show{transform:none}#kpdp .sticky .btn{padding:12px;font-size:17px}#kpdp .sticky .sub{margin-top:6px;font-size:11px}#kpdp .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:80;padding:16px}#kpdp .modal.open{display:flex}#kpdp .modal .in{background:#fff;border-radius:14px;max-width:460px;width:100%;padding:18px;max-height:90vh;overflow:auto}#kpdp .modal .in h3{font-size:18px;font-weight:900;display:flex;justify-content:space-between}#kpdp .modal table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}#kpdp .modal th,#kpdp .modal td{border-bottom:1px solid #eee;padding:7px 4px;text-align:center}#kpdp .modal th{background:var(--soft);font-size:12px}#kpdp .modal p{font-size:12px;margin-top:10px;color:var(--mute)}#kpdp .herov{max-width:560px;margin:22px auto 0;border-radius:14px;overflow:hidden}#kpdp .herov video{width:100%}#kpdp .hero-copy h2{font-size:30px;font-weight:900;text-align:center;line-height:1.4}#kpdp .hero-copy p{font-size:15px;margin-top:14px;line-height:1.95}
+
+/* ===== PC ===== */
+@media (min-width:980px){#kpdp .buy{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;padding:24px 24px 0}#kpdp .gal{padding:0;position:sticky;top:16px;align-self:start}#kpdp .gal .thumbs{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:10px}#kpdp .gal .thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent}#kpdp .gal .thumbs img.on{border-color:var(--ink)}#kpdp .gal .dots{display:none}#kpdp .info{padding:0}#kpdp h1{font-size:28px}#kpdp h2.sec,#kpdp .hero-copy h2,#kpdp .final h2{font-size:40px}#kpdp section{padding:84px 0}#kpdp .feat{grid-template-columns:repeat(4,1fr)}#kpdp .mini .c{flex:0 0 86%}#kpdp .kd-slider .track{padding:0 4%}#kpdp .kd-slider .card{flex:0 0 30%}#kpdp .people .card{flex:0 0 31%}#kpdp .rv .rvgrid{columns:4}#kpdp .cmp table{font-size:14px}#kpdp .final{max-width:720px;margin:0 auto}#kpdp .final p{text-align:center}#kpdp .sticky{display:none}#kpdp .diff .ba{aspect-ratio:4/5}#kpdp .limited,#kpdp .nostore,#kpdp .icons3{max-width:100%}
+}
+
+/* 本番の枠の中に置くための上書きと、v2 で足した部品 */
+#kpdp{background:#fff}
+#kpdp h1,#kpdp h2,#kpdp h3,#kpdp h4,#kpdp h5{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;color:var(--ink);text-transform:none;margin:0}
+#kpdp p{margin:0}
+#kpdp a{text-decoration:none}
+#kpdp .stars a{text-decoration:underline}
+#kpdp .faq .a a{text-decoration:underline}
+#kpdp button{min-height:0;box-shadow:none}
+#kpdp .btn.pri{box-shadow:0 4px 0 var(--ac-d)}
+#kpdp .gal .badge{display:none}
+
+/* 5枚は得に見せない */
+#kpdp .tier .weak{font-size:11px;color:#9a8f93;margin-top:6px;font-weight:700}
+#kpdp .tier[data-n="5"] .per{color:#6f6669}
+#kpdp .tier .ribbon{background:linear-gradient(90deg,#d6557c,#b83d63)}
+
+/* 見た目の不安（楽天の★3の声 → ここちドライは違う） */
+#kpdp .faq .rv3{background:#f6f3f4;border-left:3px solid #cbbfc4;padding:8px 10px;font-size:13px;line-height:1.7;margin:2px 0 10px}
+#kpdp .faq .rv3 small{display:block;color:#8d8387;font-size:11px;margin-top:2px}
+#kpdp .faq .rv3 .st{color:var(--gold);letter-spacing:1px}
+#kpdp .faq .no{font-weight:900;color:var(--plum);font-size:15px;display:block;margin-bottom:4px}
+#kpdp .faq .qtag{font-size:10px;font-weight:700;color:#fff;background:var(--plum);border-radius:8px;padding:1px 6px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+#kpdp .faq .grp{font-size:12px;color:var(--mute);font-weight:700;padding:16px 2px 2px;border-bottom:1px solid #eee}
+
+#kpdp .mail{cursor:pointer;background:none;border:0;width:100%}
+#kpdp .rv .it .ph span{display:none}
+
+/* ===== v3 ===== */
+/* ボタンを横にプルプル */
+@keyframes kd-sway{0%,72%,100%{transform:translateX(0)}76%{transform:translateX(-5px)}80%{transform:translateX(5px)}84%{transform:translateX(-4px)}88%{transform:translateX(4px)}92%{transform:translateX(-2px)}96%{transform:translateX(2px)}}
+#kpdp #atc,#kpdp #stickyBtn,#kpdp .cta,#kpdp .sway,#kpdp .final .btn.pri{animation:kd-sway 2.6s ease-in-out infinite}
+#kpdp #atc.wait,#kpdp #stickyBtn.wait{animation-duration:2.6s}
+#kpdp .btn.pri.sway{display:flex;text-decoration:none;max-width:420px;margin:0 auto}
+
+/* よくある質問：言い切り＋確かめられる3点 */
+#kpdp .faq .no{font-size:16px;color:var(--ac);margin-bottom:6px}
+#kpdp .faq .pts{list-style:none;margin:10px 0 2px;padding:0}
+#kpdp .faq .pts li{position:relative;padding:3px 0 3px 26px;font-size:13px;font-weight:700}
+#kpdp .faq .pts li:before{content:"✓";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:var(--ac);color:#fff;font-size:11px;line-height:18px;text-align:center}
+
+/* 違い：棒をはっきり */
+#kpdp .diff .ba .ln{width:4px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 12px rgba(0,0,0,.35);z-index:2}
+#kpdp .diff .ba .knob{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--ac);border:3px solid #fff;box-shadow:0 3px 14px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px}
+#kpdp .diff .ba .knob i{font-style:normal}
+#kpdp .diff .ba .l,#kpdp .diff .ba .r{top:auto;bottom:14px;font-size:14px;padding:5px 14px;z-index:3}
+#kpdp .diff .ba .l{background:rgba(40,40,40,.8)}
+#kpdp .diff .ba input{z-index:4}
+#kpdp .diff .bahint{text-align:center;font-size:13px;font-weight:700;color:var(--plum);margin-top:10px;letter-spacing:.08em}
+#kpdp .diff .ba.hint .ln{transition:left .6s ease}
+#kpdp .diff .ba.hint .aft{transition:clip-path .6s ease}
+
+/* 見出しの上の小さい文字 */
+#kpdp .eyebrow{text-align:center;color:var(--ac);font-weight:700;font-size:14px;letter-spacing:.12em;margin-bottom:8px}
+
+/* はじめての吸水ショーツ */
+#kpdp .first{margin-top:56px;border-top:1px solid #f0e6ea;padding-top:44px;text-align:center}
+#kpdp .first h3{font-size:24px;font-weight:900;line-height:1.5}
+#kpdp .first .lead{font-size:14px;margin:12px auto 0;max-width:640px;text-align:left}
+#kpdp .first .three{display:grid;grid-template-columns:1fr;gap:0;margin:22px auto 0;max-width:760px;text-align:left}
+#kpdp .first .three div{border-bottom:1px solid #f0e6ea;padding:14px 0}
+#kpdp .first .three b{display:block;font-size:17px;font-weight:900;line-height:1.5;color:var(--plum)}
+#kpdp .first .three span{display:block;font-size:13px;margin-top:4px}
+
+/* 何回洗えるか */
+#kpdp .wash{margin-top:56px;background:var(--soft);border-radius:18px;padding:30px 16px 22px;text-align:center}
+#kpdp .wash .eyebrow{font-size:13px}
+#kpdp .wash h3{font-size:24px;font-weight:900;line-height:1.5}
+#kpdp .machines{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:360px;margin:20px auto 0}
+#kpdp .machines div{position:relative;aspect-ratio:1/1;border-radius:10px;background:#fff;border:2px solid #ead3db;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#b9a6ad;transition:.3s}
+#kpdp .machines div svg{width:26px;height:26px}
+#kpdp .machines div.on{border-color:var(--ac);color:var(--ac);background:#fff}
+#kpdp .washbar{position:relative;height:12px;border-radius:6px;background:#fff;max-width:520px;margin:30px auto 34px;border:1px solid #ead3db}
+#kpdp .washbar .wfill{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,#eea9bd,var(--ac));transition:width 2.2s ease}
+#kpdp .washbar span{position:absolute;top:18px;transform:translateX(-50%);font-size:11px;font-weight:700;white-space:nowrap}
+#kpdp .washbar span:first-of-type{transform:none}
+#kpdp .washbar span:last-of-type{transform:translateX(-100%)}
+#kpdp .washnums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:620px;margin:0 auto}
+#kpdp .washnums b{display:block;font-size:20px;font-weight:900;color:var(--plum);letter-spacing:0}
+#kpdp .washnums span{display:block;font-size:11px;line-height:1.6;margin-top:2px}
+#kpdp .wash .fn{font-size:11px;color:var(--mute);margin-top:14px}
+
+/* これをはいた毎日 */
+#kpdp .life{padding-top:30px}
+#kpdp .life .lead{text-align:center;font-size:15px;margin-top:12px}
+#kpdp .life .kd-slider .card{background:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:16px}
+#kpdp .life .kd-slider .card img{aspect-ratio:4/5;object-fit:cover}
+#kpdp .outcomes{list-style:none;max-width:560px;margin:26px auto 0;padding:0}
+#kpdp .outcomes li{position:relative;padding:14px 0 14px 40px;border-bottom:1px solid #eee}
+#kpdp .outcomes li:before{content:"✓";position:absolute;left:0;top:15px;width:26px;height:26px;border:2px solid var(--ink);border-radius:50%;font-size:14px;line-height:23px;text-align:center;font-weight:900}
+#kpdp .outcomes b{display:block;font-size:17px;font-weight:900}
+#kpdp .outcomes span{display:block;font-size:14px;margin-top:2px}
+#kpdp .stockline{text-align:center;font-size:13px;font-weight:700;margin:22px 0 10px}
+#kpdp .stockline i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2fb866;margin-right:6px;vertical-align:1px;box-shadow:0 0 0 3px rgba(47,184,102,.2)}
+#kpdp .gline{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;margin-top:12px}
+#kpdp .gline img{width:24px;height:24px}
+
+/* 比較表の費用の行 */
+#kpdp .cmp tr.money td{font-weight:900;font-size:12px;color:var(--ink);background:#fff7f9}
+#kpdp .cmp tr.money td.us{color:#fff;background:var(--ac)}
+#kpdp .cmp tr.money small{display:block;font-size:9px;font-weight:700}
+
+/* 財布の比較 */
+#kpdp .wallet{max-width:560px;margin:50px auto 0;text-align:center}
+#kpdp .wallet h3{font-size:24px;font-weight:900;line-height:1.5}
+#kpdp .wallet .vs{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;margin-top:18px}
+#kpdp .wallet .side img{width:100%;max-width:190px;aspect-ratio:1/1;object-fit:cover;border-radius:12px;margin:0 auto}
+#kpdp .wallet .side b{display:block;font-size:14px;font-weight:900;margin-top:8px}
+#kpdp .wallet .side b.brand{color:var(--ac)}
+#kpdp .wallet .vsdot{width:38px;height:38px;border-radius:50%;background:var(--plum);color:#fff;font-size:12px;font-weight:900;line-height:38px;letter-spacing:0}
+#kpdp .wallet .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+#kpdp .wallet .col{position:relative;padding-left:22px;border-left:1px solid #ddd;display:flex;flex-direction:column;gap:10px}
+#kpdp .wallet .rail{position:absolute;left:-2px;top:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap;background:#fff;padding:0 6px;font-size:11px;font-weight:900;letter-spacing:.12em}
+#kpdp .wallet .paper .rail{color:#e2233b}
+#kpdp .wallet .kd .rail{color:var(--plum)}
+#kpdp .wallet .box{border-radius:12px;color:#fff;font-weight:900;font-size:19px;padding:10px 4px;line-height:1.25;letter-spacing:0}
+#kpdp .wallet .box small{display:block;font-size:12px;font-weight:700;opacity:.95}
+#kpdp .wallet .paper .b1{background:#f7c6cc}
+#kpdp .wallet .paper .b2{background:#f29aa5}
+#kpdp .wallet .paper .b3{background:#ec6a79}
+#kpdp .wallet .paper .b4{background:#e2233b}
+#kpdp .wallet .kd .box{background:var(--plum)}
+#kpdp .wallet .kd .box:first-of-type{background:var(--ac)}
+#kpdp .wallet .saved{margin:18px auto 0;border:2px solid var(--ac);border-radius:14px;padding:10px;max-width:320px}
+#kpdp .wallet .saved small{display:block;font-size:13px;font-weight:700}
+#kpdp .wallet .saved b{font-size:30px;font-weight:900;color:var(--ac);letter-spacing:0}
+#kpdp .wallet .replace{font-size:15px;margin-top:16px;line-height:1.7}
+#kpdp .wallet .replace b{color:var(--plum)}
+#kpdp .wallet .replace span{font-size:13px;color:var(--mute)}
+#kpdp .wallet .fn{font-size:11px;color:var(--mute);margin-top:8px}
+
+/* リスクなしのお約束 */
+#kpdp .promise{padding:10px 0 50px}
+#kpdp .pcard{max-width:560px;margin:0 auto;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);border-radius:20px;padding:26px 18px 22px;text-align:center;background:linear-gradient(#fff,#fff8fa)}
+#kpdp .pcard .tagline{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;border-radius:14px;padding:3px 14px}
+#kpdp .pcard .medal{width:120px;height:120px;margin:12px auto 0}
+#kpdp .pcard h3{font-size:24px;font-weight:900;line-height:1.5;margin-top:10px}
+#kpdp .pcard .lead{font-size:14px;margin-top:8px}
+#kpdp .pbox{border:2px solid var(--ink);border-radius:14px;background:#fdeef3;padding:10px 12px 10px 44px;text-align:left;margin-top:12px;position:relative}
+#kpdp .pbox.y{background:#fff6d9}
+#kpdp .pbox:before{content:"✓";position:absolute;left:12px;top:12px;width:22px;height:22px;border:2px solid var(--ink);border-radius:50%;font-size:12px;line-height:19px;text-align:center;font-weight:900}
+#kpdp .pbox b{display:block;font-size:15px;font-weight:900}
+#kpdp .pbox span{display:block;font-size:13px}
+#kpdp .pcard .why{text-align:left;border-left:3px solid var(--ac);padding:4px 0 4px 12px;margin-top:18px}
+#kpdp .pcard .why b{display:block;font-size:15px;font-weight:900}
+#kpdp .pcard .why span{display:block;font-size:13px;margin-top:2px}
+
+@media (min-width:980px){
+  #kpdp .first .three{grid-template-columns:repeat(3,1fr);gap:24px}
+  #kpdp .first .three div{border:0}
+  #kpdp .life .kd-slider .card{flex:0 0 28%}
+}
+/* v3 直し */
+#kpdp table,#kpdp th,#kpdp td{border:0}
+#kpdp .cmp table{table-layout:fixed}
+#kpdp .cmp th,#kpdp .cmp td{border-bottom:1px solid #eee;word-break:keep-all;overflow-wrap:anywhere}
+#kpdp .cmp th:first-child,#kpdp .cmp td:first-child{width:34%}
+#kpdp .cmp .us{width:19%}
+#kpdp .cmp thead th.grp{border-bottom:0}
+#kpdp .faq table th,#kpdp .faq table td,#kpdp .modal th,#kpdp .modal td{border:1px solid #eee}
+#kpdp .life h2.sec{font-size:27px}
+#kpdp .wallet .col{padding-left:0;border-left:0;padding-top:0}
+#kpdp .wallet .rail{position:static;transform:none;background:none;padding:0;font-size:12px;margin-bottom:2px}
+#kpdp .wallet .cols{position:relative}
+#kpdp .wallet .cols:before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px dashed #ddd}
+#kpdp .cmp tr.money td{line-height:1.35}
+#kpdp .machines div{border-color:#e6dfe2;color:#c4bbbf;background:#faf8f9}
+#kpdp .machines div.on{border-color:var(--ac);color:#fff;background:var(--ac)}
+
+/* ===== v4：NovaPaw の並びをここちドライの色で ===== */
+/* 見出し・数字・特長（値段より先） */
+#kpdp h1.hl{font-size:22px;line-height:1.5;letter-spacing:.06em;margin-top:8px}
+#kpdp h1.hl .em{display:inline}
+#kpdp .subhl{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.7}
+#kpdp .kpis{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border-top:1px solid #eee;border-bottom:1px solid #eee}
+#kpdp .kpis div{text-align:center;padding:10px 2px;border-left:1px solid #eee}
+#kpdp .kpis div:first-child{border-left:0}
+#kpdp .kpis b{display:block;font-size:20px;font-weight:900;letter-spacing:0;color:var(--ink)}
+#kpdp .kpis span{display:block;font-size:11px;line-height:1.4;color:var(--mute);font-weight:700}
+#kpdp .flist{list-style:none;margin:12px 0 4px;padding:0}
+#kpdp .flist li{position:relative;padding:9px 0 9px 28px;border-bottom:1px solid #f1eaed;font-size:13px;line-height:1.5}
+#kpdp .flist li:before{content:"";position:absolute;left:2px;top:11px;width:17px;height:17px;background:var(--ac);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C9 7 5 10 5 14.5A7 7 0 0 0 19 14.5C19 10 15 7 12 2Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C9 7 5 10 5 14.5A7 7 0 0 0 19 14.5C19 10 15 7 12 2Z'/%3E%3C/svg%3E") center/contain no-repeat}
+#kpdp .flist b{font-weight:900}
+#kpdp .info .price{margin-top:14px}
+
+/* 共通のパネル */
+#kpdp .np{padding:56px 0}
+#kpdp .np.soft{background:#fdf0f4}
+#kpdp .np.cream{background:#fff8e7}
+#kpdp .wrap.narrow{max-width:640px}
+#kpdp .eyebrow.red{color:#e2233b}
+#kpdp .eyebrow.left,#kpdp h2.sec.left{text-align:left}
+#kpdp .lead.center,#kpdp .fn.center{text-align:center}
+#kpdp .np h2.sec{font-size:26px}
+#kpdp .np .stockline{margin-top:28px}
+
+/* なぜ、うまくいかなかったのか */
+#kpdp .wcards{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+#kpdp .wc{display:grid;grid-template-columns:1fr 84px;gap:10px;align-items:center;background:#f7f6f6;border:1px solid #ebe6e8;border-radius:14px;padding:14px}
+#kpdp .wc h4{font-size:16px;font-weight:900}
+#kpdp .wc p{font-size:13px;margin-top:4px;line-height:1.7}
+#kpdp .wc img{width:84px;height:84px;object-fit:contain;mix-blend-mode:multiply}
+#kpdp .rtag{display:inline-block;margin-top:8px;border:1.5px solid #e2233b;color:#e2233b;border-radius:12px;font-size:11px;font-weight:700;padding:1px 10px}
+#kpdp .insight{margin-top:18px;background:#fff6d9;border:2px solid var(--ink);border-radius:14px;padding:14px 16px;text-align:left}
+#kpdp .insight .ih{display:flex;justify-content:space-between;font-size:13px;font-weight:900}
+#kpdp .insight b{display:block;font-size:24px;font-weight:900;letter-spacing:0;margin-top:2px}
+#kpdp .insight p{font-size:13px;margin-top:6px;line-height:1.8}
+#kpdp .insight.small b{font-size:18px}
+#kpdp .edu{padding:10px 0 40px}
+#kpdp .edu .mech{margin-top:0;border-top:0}
+
+/* ここちドライとは */
+#kpdp .meetgrid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:24px}
+#kpdp .meetimg{position:relative;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);border-radius:18px;overflow:hidden;background:#fff}
+#kpdp .meetimg img{width:100%;aspect-ratio:4/3;object-fit:cover}
+#kpdp .kd-bubble{position:absolute;right:10px;top:12px;background:#fff;border:2px solid var(--ink);border-radius:22px;padding:8px 14px;font-size:14px;font-weight:900;line-height:1.4;text-align:center}
+#kpdp .kd-bubble:after{content:"";position:absolute;left:18px;bottom:-12px;border:6px solid transparent;border-top:8px solid var(--ink)}
+#kpdp .meetlist>div:not(.stockline):not(.gline){position:relative;padding:12px 0 12px 50px;border-bottom:1px solid #ead9df}
+#kpdp .meetlist .mi{position:absolute;left:0;top:12px;width:38px;height:38px;border-radius:50%;background:#fff;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:19px}
+#kpdp .meetlist b{display:block;font-size:16px;font-weight:900}
+#kpdp .meetlist p{font-size:13px;margin-top:2px}
+
+/* 使い方 */
+#kpdp .steps{display:grid;grid-template-columns:1fr;gap:22px;margin-top:24px}
+#kpdp .step{text-align:center}
+#kpdp .step img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink);border-radius:14px}
+#kpdp .step i{display:block;width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;font-style:normal;font-weight:900;line-height:34px;margin:-18px auto 0;position:relative;border:2px solid #fff}
+#kpdp .step h4{font-size:17px;font-weight:900;margin-top:6px}
+#kpdp .step p{font-size:13px;margin-top:4px;line-height:1.8;text-align:left}
+
+/* 特長 */
+#kpdp .fgrid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+#kpdp .fc{background:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:14px;padding:12px}
+#kpdp .fc>img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px;background:#f6f2f3}
+#kpdp .fc h4{font-size:16px;font-weight:900;margin-top:10px}
+#kpdp .fc p{font-size:13px;margin-top:4px;line-height:1.75}
+#kpdp .fc ul{list-style:none;margin:10px 0 0;padding:8px 0 0;border-top:1px solid #eee}
+#kpdp .fc li{font-size:12px;padding:2px 0 2px 12px;position:relative}
+#kpdp .fc li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;background:var(--ink);border-radius:50%}
+#kpdp .fc.center{border:0;box-shadow:none;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#kpdp .fc.center>img{aspect-ratio:1/1;object-fit:contain;background:none;max-width:280px}
+#kpdp .fc .badges{display:flex;gap:8px;align-items:center;margin-top:8px}
+#kpdp .fc .badges span{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:4px 8px;font-size:13px;font-weight:900;text-align:center;line-height:1.2}
+#kpdp .fc .badges small{display:block;font-size:10px;color:var(--mute)}
+#kpdp .fc .badges img{width:48px;height:48px}
+
+/* 暮らし */
+#kpdp .life .kd-slider .card{background:#fff}
+
+/* 専門家 */
+#kpdp .progrid{display:grid;grid-template-columns:1fr;gap:20px}
+#kpdp .pro .lead{font-size:14px;margin-top:10px}
+#kpdp .bars-h{font-size:17px;font-weight:900;margin-top:20px}
+#kpdp .bars{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+#kpdp .bar{position:relative;border:2px solid var(--ink);border-radius:10px;padding:8px 12px 14px;background:#fff;display:flex;gap:10px;align-items:baseline}
+#kpdp .bar b{font-size:18px;font-weight:900;letter-spacing:0;min-width:48px}
+#kpdp .bar span{font-size:13px;font-weight:700}
+#kpdp .bar i{position:absolute;left:12px;right:12px;bottom:6px;height:4px;border-radius:2px;background:#f3dfe6}
+#kpdp .bar i:before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--ac);border-radius:2px}
+#kpdp .pro .fn{font-size:11px;color:var(--mute);margin-top:8px}
+#kpdp .partners{margin-top:18px}
+#kpdp .partners .ph{font-size:12px;font-weight:700;color:var(--mute)}
+#kpdp .partners .logos{margin-top:8px}
+#kpdp .proimg{position:relative}
+#kpdp .proimg>img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px}
+#kpdp .seal{position:absolute;left:10px;top:10px;width:92px;height:92px;border-radius:50%;background:#fff;border:3px double var(--ac);color:var(--plum);font-size:11px;font-weight:900;line-height:1.3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);box-shadow:0 3px 10px rgba(0,0,0,.15)}
+#kpdp .seal b{font-size:14px;color:var(--ac)}
+#kpdp .pquote{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.8;margin:-40px 12px 0;position:relative}
+#kpdp .pquote small{display:block;text-align:right;font-weight:700;margin-top:4px}
+
+/* くらべる */
+#kpdp .vt{width:100%;border-collapse:separate;border-spacing:0;margin-top:22px;background:#fff;border:2px solid var(--ink);border-radius:14px;overflow:hidden;table-layout:fixed}
+#kpdp .vt th,#kpdp .vt td{padding:12px 6px;text-align:center;border-bottom:1px solid #eee;font-size:13px}
+#kpdp .vt tr:last-child td{border-bottom:0}
+#kpdp .vt td:first-child{text-align:left;font-weight:700;width:44%}
+#kpdp .vt td:first-child span{margin-right:6px}
+#kpdp .vt .us{background:var(--ac);color:#fff;font-weight:900;font-size:18px;width:28%}
+#kpdp .vt .us.t{font-size:14px}
+#kpdp .vt th.us img{height:18px;width:auto;margin:0 auto;filter:brightness(0) invert(1)}
+#kpdp .vt th.them img{width:42px;height:42px;object-fit:cover;border-radius:6px;margin:0 auto}
+#kpdp .vt th.them span{display:block;font-size:11px;font-weight:700;margin-top:2px}
+#kpdp .vt .them{width:28%;color:var(--mute)}
+#kpdp .vt .them.x{color:#e2233b;font-size:18px;font-weight:900}
+#kpdp .vt .them.t{font-size:13px;font-weight:700}
+
+/* 最後のよくある質問 */
+#kpdp .qa{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+#kpdp .qa details{background:#fff6d9;border:2px solid var(--ink);border-radius:12px}
+#kpdp .qa summary{list-style:none;cursor:pointer;padding:14px 40px 14px 14px;font-weight:900;font-size:15px;position:relative;line-height:1.5}
+#kpdp .qa summary::-webkit-details-marker{display:none}
+#kpdp .qa summary:after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateY(-70%) rotate(45deg);transition:.2s}
+#kpdp .qa details[open] summary:after{transform:translateY(-30%) rotate(-135deg)}
+#kpdp .qa details>div{padding:0 14px 14px;font-size:14px;line-height:1.9}
+
+@media (min-width:980px){
+  #kpdp h1.hl{font-size:26px}
+  #kpdp .np h2.sec{font-size:36px}
+  #kpdp .wcards{display:grid;grid-template-columns:1fr 1fr}
+  #kpdp .meetgrid{grid-template-columns:1.1fr 1fr;align-items:center;gap:36px}
+  #kpdp .steps{grid-template-columns:repeat(3,1fr)}
+  #kpdp .fgrid{grid-template-columns:repeat(3,1fr)}
+  #kpdp .progrid{grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+  #kpdp .life .kd-slider .card{flex:0 0 26%}
+}
+#kpdp .vt .uslogo{font-size:15px;font-weight:900;line-height:1.3;color:#fff}
+#kpdp .pro h2.sec+.lead{text-align:left}
+
+
+/* 見出しをギャラリーの上へ（NovaPaw型） */
+#kpdp h1.hl.top{grid-column:1/-1;order:-1;text-align:center;font-size:21px;line-height:1.5;letter-spacing:.05em;margin:14px 0 4px;padding:0 16px;font-weight:900}
+#kpdp h1.hl.top .em{display:inline;color:var(--ac)}
+@media(min-width:900px){#kpdp h1.hl.top{font-size:30px;line-height:1.45;margin:22px 0 10px;padding:0 24px}}
+
+/* ===== カート（アルコット型） ===== */
+cart-drawer#CartDrawer,cart-drawer{visibility:hidden!important;pointer-events:none!important}
+#kpdp .kc-ov{position:fixed;inset:0;background:rgba(30,20,25,.45);z-index:9998}
+#kpdp .kc{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:#fff;z-index:9999;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .3s ease;box-shadow:-8px 0 30px rgba(0,0,0,.15);font-family:"Zen Maru Gothic",sans-serif}
+#kpdp .kc.open{transform:none}
+#kpdp .kc-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px}
+#kpdp .kc-head h3{font-size:19px;font-weight:700}
+#kpdp .kc-x{font-size:30px;line-height:1;padding:0 4px}
+#kpdp .kc-banner{background:var(--ac);color:#fff;text-align:center;font-weight:700;font-size:14px;padding:9px 10px;line-height:1.5}
+#kpdp .kc-banner button{display:inline-block;margin-left:6px;background:#fff;color:var(--ac);border-radius:14px;padding:1px 10px;font-size:12px;font-weight:900}
+#kpdp .kc-stars{background:#fdeef3;text-align:center;font-size:13px;font-weight:900;padding:7px}
+#kpdp .kc-stars span{color:var(--ac);letter-spacing:1px}
+#kpdp .kc-ship{text-align:center;font-size:13px;padding:10px 16px 12px;border-bottom:1px solid #eee}
+#kpdp .kc-ship i{display:block;height:5px;border-radius:3px;background:var(--ink);margin:8px auto 0;width:60%}
+#kpdp .kc-body{flex:1;overflow-y:auto;overscroll-behavior:contain}
+#kpdp .kc-item{display:grid;grid-template-columns:84px 1fr auto;gap:12px;padding:16px;border-bottom:1px solid #eee}
+#kpdp .kc-item img{width:84px;height:84px;object-fit:cover;border-radius:6px;background:#f6f2f3}
+#kpdp .kc-item h5{font-size:15px;font-weight:900;line-height:1.4}
+#kpdp .kc-item .v{font-size:12px;color:var(--mute);margin-top:4px;line-height:1.5}
+#kpdp .kc-item .chg{margin-top:8px;border:1px solid #ccc;border-radius:4px;padding:4px 10px;font-size:12px;font-weight:700}
+#kpdp .kc-item .qty{display:inline-flex;align-items:center;border:1px solid #ddd;border-radius:4px;margin-top:8px;margin-left:6px}
+#kpdp .kc-item .qty button{width:26px;height:26px;font-size:15px}
+#kpdp .kc-item .qty span{min-width:22px;text-align:center;font-size:13px;font-weight:700}
+#kpdp .kc-item .r{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+#kpdp .kc-item .r s{font-size:12px;color:#999}
+#kpdp .kc-item .r b{font-size:16px;font-weight:900}
+#kpdp .kc-item .r .tag{background:#fdeef3;color:var(--plum);font-size:11px;font-weight:700;border-radius:4px;padding:2px 6px}
+#kpdp .kc-item .del{margin-top:auto;padding:4px}
+#kpdp .kc-item .del svg{width:18px;height:18px;stroke:#333;fill:none;stroke-width:1.8}
+#kpdp .kc-gift{display:flex;align-items:center;gap:10px;margin:0 16px 12px;padding:8px 10px;background:#fdeef3;border-radius:10px;font-size:12px}
+#kpdp .kc-gift img{width:40px;height:40px;object-fit:cover;border-radius:6px;background:#fff}
+#kpdp .kc-gift b{font-weight:900}
+#kpdp .kc-gift .g0{margin-left:auto;text-align:right;line-height:1.3}
+#kpdp .kc-gift .g0 s{display:block;color:#999;font-size:11px}
+#kpdp .kc-gift .g0 em{font-style:normal;font-weight:900;color:var(--ac);font-size:15px}
+#kpdp .kc-empty{text-align:center;padding:40px 16px;font-weight:700}
+#kpdp .kc-empty button{display:block;margin:14px auto 0;background:var(--ac);color:#fff;border-radius:8px;padding:10px 24px}
+#kpdp .kc-coupon{margin:4px 16px 0;font-size:13px;font-weight:700;text-align:center}
+#kpdp .kc-coupon button{text-decoration:underline;font-weight:900;color:var(--ac)}
+#kpdp .kc-coupon .ok{display:block;background:#effaf3;color:#1f8a4c;border-radius:8px;padding:7px}
+#kpdp .kc-sec{padding:16px;border-bottom:1px solid #eee}
+#kpdp .kc-sec h4{font-size:15px;font-weight:900}
+#kpdp .kc-pw{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px;margin-top:12px}
+#kpdp .kc-pw div{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;line-height:1.35}
+#kpdp .kc-pw i{flex:none;width:34px;height:34px;border-radius:50%;background:#fdeef3;display:flex;align-items:center;justify-content:center}
+#kpdp .kc-pw svg{width:18px;height:18px;fill:none;stroke:var(--ac);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#kpdp .kc-quote{display:grid;grid-template-columns:48px 1fr;gap:12px}
+#kpdp .kc-quote img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+#kpdp .kc-quote p{font-size:13px;line-height:1.8}
+#kpdp .kc-quote b{font-size:12px;font-weight:900;margin-right:8px}
+#kpdp .kc-quote span{font-size:11px;color:var(--mute)}
+#kpdp .kc-up{display:grid;grid-template-columns:24px 1fr 24px;align-items:center;gap:6px;border-bottom:0}
+#kpdp .kc-arr{color:#aaa;font-size:18px}
+#kpdp .kc-uptrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:10px}
+#kpdp .kc-uptrack::-webkit-scrollbar{display:none}
+#kpdp .kc-upc{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:64px 1fr;gap:12px;background:#f6f1ee;border-radius:10px;padding:12px}
+#kpdp .kc-upc img{width:64px;height:64px;object-fit:cover;border-radius:6px;background:#fff}
+#kpdp .kc-upc h5{font-size:13px;font-weight:700;line-height:1.4}
+#kpdp .kc-upc .p{font-size:13px;font-weight:900;margin-top:2px}
+#kpdp .kc-upc .p small{font-weight:700;color:var(--mute);margin-left:6px;font-size:11px}
+#kpdp .kc-upc button{margin-top:6px;background:var(--ink);color:#fff;border-radius:4px;padding:4px 12px;font-size:12px;font-weight:700}
+#kpdp .kc-foot{border-top:1px solid #eee;padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+#kpdp .kc-disc{display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#1f8a4c;margin-bottom:4px}
+#kpdp .kc-total{display:flex;align-items:center;gap:8px}
+#kpdp .kc-total span{font-weight:900;font-size:15px;margin-right:auto}
+#kpdp .kc-total em{font-style:normal;background:#fdeef3;color:var(--ac);border-radius:14px;padding:3px 10px;font-size:12px;font-weight:900}
+#kpdp .kc-total s{color:#999;font-size:13px}
+#kpdp .kc-total b{font-size:20px;font-weight:900;letter-spacing:0}
+#kpdp .kc-pay{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:10px;background:var(--ac);color:#fff;border-radius:30px;padding:10px;font-size:17px;font-weight:900;text-decoration:none;line-height:1.3;animation:kd-sway 2.6s ease-in-out infinite}
+#kpdp .kc-pay small{font-size:11px;font-weight:700}
+#kpdp .kc-pay.busy{opacity:.6;pointer-events:none}
+#kpdp .kc-cards{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin-top:10px}
+#kpdp .kc-cards span{border:1px solid #ddd;border-radius:4px;font-size:9px;font-weight:700;padding:2px 5px;letter-spacing:0}
+#kpdp .kc-loading{padding:40px;text-align:center;color:var(--mute);font-weight:700}
+#kpdp [hidden]{display:none!important}
+#kpdp .pcard .dev{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:center;text-align:left;margin-top:18px;padding:12px;background:#fff;border:1.5px solid var(--line);border-radius:14px}
+#kpdp .pcard .dev img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+#kpdp .pcard .dev p{font-size:13px;line-height:1.7;font-weight:700}
+#kpdp .pcard .dev b{font-size:12px;font-weight:900;margin-right:8px}
+#kpdp .pcard .dev span{font-size:11px;color:var(--mute)}
+#kpdp .proimg>img{object-position:center top}
+#kpdp .fc>img.face{object-position:center 8%}
+
+/* 医師の欄（NovaPaw 型：写真を後ろに透かし、実感のカードを重ねる） */
+#kpdp .pro2{padding:44px 0 56px;background:linear-gradient(#fff,#fdf0f4);overflow:hidden}
+#kpdp .p2hero{position:relative;min-height:430px}
+#kpdp .p2photo{position:absolute;right:-16px;top:0;width:62%;height:470px;object-fit:cover;object-position:60% 12%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%),linear-gradient(#000 70%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 38%),linear-gradient(#000 70%,transparent);mask-composite:intersect}
+#kpdp .p2text{position:relative;z-index:2;max-width:62%}
+#kpdp .p2h{font-size:25px;font-weight:900;line-height:1.45;margin-top:4px}
+#kpdp .p2lead{font-size:13px;line-height:1.85;margin-top:10px;text-shadow:0 0 8px #fff,0 0 8px #fff}
+#kpdp .p2name{margin-top:14px;font-size:11px;color:var(--mute)}
+#kpdp .p2name b{display:block;font-size:15px;color:var(--ink);font-weight:900}
+#kpdp .p2card{position:relative;z-index:3;margin-top:-90px;background:#fff;border-radius:22px;padding:22px 14px 16px;box-shadow:0 14px 40px rgba(110,42,71,.16)}
+#kpdp .p2card h3{font-size:18px;font-weight:900;margin:0 0 14px 4px;padding-right:90px}
+#kpdp .p2seal{position:absolute;right:12px;top:-34px;width:88px;height:88px;border-radius:50%;background:#fff;border:3px double var(--ac);color:var(--plum);font-size:10px;font-weight:900;line-height:1.3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+#kpdp .p2seal b{font-size:13px;color:var(--ac)}
+#kpdp .p2bar{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:center;border:2px solid var(--ink);border-radius:12px;padding:8px 12px 8px 8px;margin-top:10px;box-shadow:3px 3px 0 var(--ink)}
+#kpdp .p2bar b{background:#fdeef3;border-radius:8px;text-align:center;font-size:18px;font-weight:900;padding:6px 0;letter-spacing:0}
+#kpdp .p2bar p{font-size:13px}
+#kpdp .p2bar strong{font-weight:900}
+#kpdp .p2bar i{display:block;height:6px;border-radius:3px;background:#f3dfe6;margin-top:6px;position:relative;overflow:hidden}
+#kpdp .p2bar i:before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--ac);border-radius:3px}
+#kpdp .p2card .fn{font-size:11px;color:var(--mute);margin-top:10px}
+#kpdp .pro2 .partners{margin-top:22px}
+@media (min-width:980px){
+  #kpdp .p2hero{min-height:520px}
+  #kpdp .p2photo{width:55%;height:600px;right:0}
+  #kpdp .p2text{max-width:52%;padding-top:30px}
+  #kpdp .p2h{font-size:40px}
+  #kpdp .p2lead{font-size:16px}
+  #kpdp .p2card{max-width:760px;margin:-80px 0 0;padding:30px 28px 20px}
+  #kpdp .p2card h3{font-size:24px}
+}
+#kpdp .p2h{font-size:22px}
+#kpdp .p2hero{padding-bottom:70px;min-height:0}
+#kpdp .p2card{margin-top:-40px}
+@media (min-width:980px){#kpdp .p2h{font-size:40px}#kpdp .p2hero{min-height:560px;padding-bottom:0}#kpdp .p2card{margin-top:-120px}}
+
+</style></head><body>
+<div id="kpdp">
+
+<!-- ============ 1. 買う所 ============ -->
+<div class="buy" id="buy">
+  <h1 class="hl top">紙パンツのムダ、<span class="em">年58,400円を消す</span><br>下着に見える吸水ショーツ</h1>
+  <div class="gal">
+    <div class="main">
+      <div class="track" id="galTrack">
+        <img id="galMain" src="img/hero-classic-15-v4.webp" alt="ここちドライ 15枚セット" fetchpriority="high" decoding="async">
+        <img src="img/gal2-v6.webp" alt="" loading="lazy">
+        <img src="img/gal6-v6.webp" alt="" loading="lazy">
+        <img src="img/gal19-v6.webp" alt="水分を吸い取り、内側にしっかり保持" loading="lazy">
+        <img src="img/how-v5.webp" alt="3つの働きで、受け止める" loading="lazy">
+        <img src="img/gal5-v6.webp" alt="" loading="lazy">
+        <img src="img/gal3-v6.webp" alt="" loading="lazy">
+        <img src="img/kokochi-new-perf-4-cotton.webp" alt="" loading="lazy">
+      </div>
+    </div>
+    <div class="dots" id="galDots"></div>
+    <div class="thumbs" id="galThumbs"></div>
+  </div>
+
+  <div class="info">
+    <div class="stars"><span class="s">★★★★★</span><a href="#reviews">4.7 高評価 ｜ 2,657件のレビュー</a></div>
+    <p class="subhl">吸水層を最初からショーツに縫い込んだから、パッドを貼らなくても、いつもの下着のまま一日を過ごせます。</p>
+    <div class="kpis">
+      <div><b>95%</b><span>もうパッドを<br>買っていない</span></div>
+      <div><b>10,000件+</b><span>累計販売</span></div>
+      <div><b>¥58,400</b><span>年間で浮く<br>紙パンツ代</span></div>
+    </div>
+    <ul class="flist">
+      <li><b>服の上から分からない薄さ</b> — 段差も、ふくらみも出ない</li>
+      <li><b>コップ1杯分を受け止める</b> — くしゃみ・咳の急な尿もれにも</li>
+      <li><b>洗って繰り返し使える</b> — 約100回。毎月の買い足しなし</li>
+      <li><b>においをこもらせない</b> — 吸った水を肌から離す</li>
+    </ul>
+    <div class="price"><span class="now" data-price>¥29,890</span><span class="was" data-was>¥49,890</span><span class="day" data-day>1日あたり 約5円</span></div>
+    <div class="saleline">サマーセール開催中 — 今だけ40%OFF</div>
+
+    <div class="opt" id="sizeOpt">
+      <div class="lab"><span>サイズ<span class="cur" id="sizeCur">未選択</span></span><button type="button" data-open-size>サイズ表を見る</button></div>
+      <div class="kd-sizes" id="sizes"></div>
+      <div class="sizehint">迷ったら大きいほう。合わなければ30日以内なら無料で交換します。</div>
+    </div>
+
+    <div class="tiers" id="tiers"></div>
+
+    <div class="gifts">
+      <div class="h">あなたのセットに付く無料特典 <b id="giftCount">4 / 4</b></div>
+      <div class="g" id="gifts"></div>
+    </div>
+
+    <div class="live"><i></i><span id="orders">250</span>件のご注文・過去24時間</div>
+    <div class="soldout">在庫切れ次第、セールは終了します。</div>
+    <div class="fine">※お得は通常価格との差</div>
+
+    <div class="box">1セット＝同じ色・同じサイズの枚数分。色やサイズを分けたい時は、2セット目としてカートに入れてください。</div>
+
+    <div class="atc">
+      <p class="kn-err" id="buyErr" hidden style="color:#c0392b;font-size:13px;font-weight:700;margin-bottom:8px"></p>
+      <button class="btn pri" id="atc" type="button">サイズを選ぶ</button>
+      <button class="btn blk" id="buyNow" type="button">今すぐ購入</button>
+      <div class="sub">30日間返金保証　全国送料無料</div>
+      <div class="pay"><span>VISA</span><span>Mastercard</span><span>AMEX</span><span>JCB</span><span>Apple Pay</span><span>Google Pay</span><span>Shop Pay</span></div>
+      <button class="mail" type="button" id="mailOffer">メール登録特典 <b>2,000円OFF</b> 受け取る →</button>
+    </div>
+
+    <div class="box">何枚でも送料無料。1日あたり約5〜10円。</div>
+
+    <div class="trust">
+      <div><svg viewBox="0 0 40 40" fill="none" stroke="#222" stroke-width="1.8"><path d="M3 12h20v16H3zM23 18h8l5 5v5H23z"/><circle cx="10" cy="30" r="3" fill="#fff"/><circle cx="30" cy="30" r="3" fill="#fff"/></svg>全国送料無料で お届け</div>
+      <div><svg viewBox="0 0 40 40" fill="none" stroke="#222" stroke-width="1.8"><circle cx="20" cy="20" r="15"/><path d="M13 23c2 3 4 4 7 4s5-1 7-4"/><circle cx="14" cy="16" r="1.5" fill="#222"/><circle cx="26" cy="16" r="1.5" fill="#222"/></svg>30日間 返金保証つきで試せます</div>
+      <div><svg viewBox="0 0 40 40" fill="none" stroke="#222" stroke-width="1.8"><path d="M8 30l6-20h12l6 20z"/><path d="M14 10c1 4 3 6 6 6s5-2 6-6"/></svg>30日間 サイズ交換 無料</div>
+    </div>
+
+    <!-- 見た目の不安：いいえ／はい で言い切り → 理由 → 確かめられる3点（NovaPaw の答え方） -->
+    <div class="faq">
+      <div class="grp">見た目が気になる方から、よくいただく質問</div>
+      <details><summary><span class="ic">👖</span>薄いパンツに、ラインが響きませんか</summary><div class="a">
+        <span class="no">響きにくいです。</span>吸水層はショーツの中に縫い込んであり、パッドを重ねないので段差ができません。普段の下着と同じ薄さのまま、コップ1杯分を受け止めます。
+        <ul class="pts"><li>パッドを貼らない一体型</li><li>服の上から輪郭が出にくい薄さ</li><li><a href="#diff">紙パンツと並べた写真</a>で見比べられます</li></ul></div></details>
+      <details><summary><span class="ic">🍑</span>後ろ姿が、オムツみたいに見えませんか</summary><div class="a">
+        <span class="no">見えません。</span>紙パンツのように厚みを後ろまで広げていません。形は、いつものショーツそのものです。
+        <ul class="pts"><li>お尻まわりが、もこもこしない</li><li>外側は綿80%のやわらかい生地</li><li>伸びて、体の線に沿う</li></ul></div></details>
+      <details><summary><span class="ic">🧘‍♀️</span>更衣室や温泉で、尿もれ用だとバレませんか</summary><div class="a">
+        <span class="no">バレにくいです。</span>ふくらみの出ない一体型で、見た目は普通の下着です。ヨガの更衣室や温泉の脱衣所でも、隠さずに着替えられます。
+        <ul class="pts"><li>パッドのはみ出し・ずれがない</li><li>貼って剥がす音がしない</li><li>クラシック・ベージュ・ブラックの3色</li></ul></div></details>
+      <details><summary><span class="ic">🧵</span>吸水部がゴワゴワしたり、音がしたりしませんか</summary><div class="a">
+        <span class="no">しません。</span>薄い4層で受け止めるので、厚く重ねる必要がありません。紙やビニールを使っていないので、歩いてもガサガサ鳴りません。
+        <ul class="pts"><li>肌に触れる面は、さらっとしたまま</li><li>紙・ビニールの音がしない</li><li>いつもの下着と同じはき心地</li></ul></div></details>
+      <details><summary><span class="ic">🧺</span>洗ったら、だめになりませんか</summary><div class="a">
+        <span class="no">なりません。約100回洗えます。</span>洗濯ネットに入れて、ほかの洗濯物と一緒に洗えます。15枚を順番にはけば、1枚を洗うのは15日に1回。100回洗うまで約4年です。
+        <ul class="pts"><li>洗濯機でそのまま洗える</li><li>洗濯ネットはセットに無料で付く</li><li><a href="#wash">何回洗えるかを見る</a></li></ul></div></details>
+      <details><summary><span class="ic">📏</span>深ばきすぎたり、大きすぎたりしませんか</summary><div class="a">
+        <span class="no">8サイズから、体に合わせて選べます。</span>XSから4XLまで。ヒップがいちばん大きい所で選び、迷ったら大きいほうを選んでください。
+        <ul class="pts"><li>合わなければ30日以内なら交換無料</li><li>XSから4XLまで8サイズ</li><li>薬局に無い大きいサイズもある</li></ul><table><tr><th>サイズ</th><th>ウエスト</th><th>ヒップ</th><th>体重の目安</th></tr><tr><td>XS</td><td>56〜61</td><td>81〜86</td><td>〜45</td></tr><tr><td>S</td><td>62〜67</td><td>87〜92</td><td>45〜50</td></tr><tr><td>M</td><td>68〜73</td><td>93〜98</td><td>50〜56</td></tr><tr><td>L</td><td>74〜79</td><td>99〜104</td><td>56〜62</td></tr><tr><td>XL</td><td>80〜85</td><td>105〜110</td><td>62〜69</td></tr><tr><td>2XL</td><td>86〜91</td><td>111〜116</td><td>69〜77</td></tr><tr><td>3XL</td><td>94〜99</td><td>117〜122</td><td>77〜86</td></tr><tr><td>4XL</td><td>100〜105</td><td>123〜128</td><td>86〜95</td></tr></table></div></details>
+      <details><summary><span class="ic">📦</span>配送について</summary><div class="a">
+        <span class="no">全国送料無料でお届けします。</span>追跡つきで発送し、発送後に追跡番号をお送りします。
+        <ul class="pts"><li>何枚でも送料無料</li><li>追跡番号つき</li><li><a href="/policies/shipping-policy">配送ポリシー</a></li></ul></div></details>
+      <details><summary><span class="ic">💴</span>合わなかったら、返品できますか</summary><div class="a">
+        <span class="no">できます。30日間の返金保証つきです。</span>はいて、洗ってからでも対象です。
+        <ul class="pts"><li>はいた後・洗った後でも返品できる</li><li>到着から30日以内にご連絡ください</li><li><a href="/policies/refund-policy">返品・返金ポリシー</a></li></ul></div></details>
+    </div>
+
+    <div class="mini">
+      <div class="track" id="miniTrack"></div>
+      <div class="dots" id="miniDots"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ 2. 言い切り ============ -->
+<section class="hero-copy">
+  <div class="wrap">
+    <h2>もう、<span class="em">紙パンツ</span>は<br>いらない。</h2>
+    <p style="text-align:center">恥ずかしい思いも、いらない。<br>尿もれに備えながら、いつもの下着として過ごせる。<br>女性のための吸水ショーツです。</p>
+    <div class="herov"><video id="kdVideo" src="img/hero-e-m-small.mp4" poster="img/kokochi-new-hero-e-m.webp" autoplay muted playsinline loop preload="none" disablepictureinpicture></video></div>
+  </div>
+</section>
+
+<div class="ticker"><div class="run" data-ticker>
+  <span>🚚 全国送料無料</span><span>😊 55歳からの女性に選ばれています</span><span>🛡️ 30日間の返金保証</span><span>🧺 洗濯ネット無料</span><span>📏 XSから4XLまで8サイズ</span>
+</div></div>
+
+<!-- ============ 3. 違い ============ -->
+<section class="diff" id="diff">
+  <div class="wrap">
+    <h2 class="sec">ここちドライの <span class="em">違い</span></h2>
+    <p class="lead">紙パンツと、並べて比べてください。</p>
+    <div class="kd-tabs" id="baTabs">
+      <button class="on" data-ba="1" type="button">服の上から</button>
+      <button data-ba="2" type="button">肌</button>
+      <button data-ba="3" type="button">お出かけ</button>
+    </div>
+    <div class="ba" id="ba">
+      <img class="bef" src="img/kokochi-new-ba-1-before.webp" alt="紙パンツ">
+      <img class="aft" src="img/kokochi-new-ba-1-after.webp" alt="ここちドライ">
+      <div class="ln"><span class="knob"><i>◀</i><i>▶</i></span></div>
+      <span class="l">紙パンツ</span><span class="r">ここちドライ</span>
+      <input type="range" min="0" max="100" value="50" aria-label="左右に動かして比べる">
+    </div>
+    <div class="bahint">◀ 棒を左右に動かして比べる ▶</div>
+    <div class="cap" id="baCap">紙パンツは、ズボンの上から形が浮き出る<small>ここちドライなら、輪郭が出ない</small></div>
+
+  </div>
+</section>
+
+<!-- ============ なぜ、今までうまくいかなかったのか ============ -->
+<section class="why np">
+  <div class="wrap narrow">
+    <div class="eyebrow red">なぜ、今までうまくいかなかったのか</div>
+    <h2 class="sec">いろいろ試してきた。<br>続かなかった理由は、<br>これです。</h2>
+    <div class="wcards">
+      <div class="wc"><div><h4>紙パンツ</h4><p>漏れは止まる。でも厚み・音・輪郭で、「はいている」と分かってしまう。</p><span class="rtag">見た目でバレる</span></div><img src="img/why-paper.webp" alt=""></div>
+      <div class="wc"><div><h4>尿もれパッド</h4><p>受け口は幅約8cmの一点。一気に来ると、横からあふれる。</p><span class="rtag">横もれする</span></div><img src="img/why-pad.webp" alt=""></div>
+      <div class="wc"><div><h4>生理用ナプキン</h4><p>経血のための設計。水のように速い尿には、追いつかない。</p><span class="rtag">尿のために作られていない</span></div><img src="img/why-napkin.webp" alt=""></div>
+      <div class="wc"><div><h4>骨盤底筋トレーニング</h4><p>続ければ意味はある。でも、明日の外出には間に合わない。</p><span class="rtag">今日の備えにならない</span></div><img src="img/why-exercise.webp" alt=""></div>
+      <div class="wc"><div><h4>ほかの吸水ショーツ</h4><p>洗える。でも吸水部がもこもこで、介護用に見える。</p><span class="rtag">見た目が解決しない</span></div><img src="img/why-other.webp" alt=""></div>
+    </div>
+    <div class="insight">
+      <div class="ih">業界の話 <span>💡</span></div>
+      <b>1人あたり 年58,400円</b>
+      <p>使い捨ての尿もれ用品は、「これで何とかなる」くらいには作られています。でも「もう買わなくていい」ようには作られていません。毎日、買い続けてもらうための商品だからです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 横から漏れる理由（教育）＋ 洗える回数 ============ -->
+<section class="edu">
+  <div class="wrap">
+    <div class="mech">
+      <h3>ナプキンやパッドで<br><span class="em">横から漏れる</span>理由</h3>
+      <p class="lead">尿は、経血のようにゆっくり出ません。くしゃみ1回で一気に来ます。</p>
+      <figure><img src="img/01_受け口の面積_v1.webp" alt="点で受ける・面で受ける" loading="lazy"></figure>
+      <p class="say">漏れるのは、量が多いからじゃない。<br><span class="em">受け口が小さいから。</span></p>
+      <figure><img src="img/02_同時注ぎ_v1.webp" alt="同じ量を同じ速さで注いだ比較" loading="lazy"></figure>
+      <figure><img src="img/05_受ける広げる離す_v1.webp" alt="受ける・広げる・離す" loading="lazy"></figure>
+      <div class="steps3">
+        <div><b>受ける</b><span>股の全面が受け口</span></div>
+        <div><b>広げる</b><span>一点に来た水を横へ広げて吸う</span></div>
+        <div><b>離す</b><span>吸った水を肌に戻さない</span></div>
+      </div>
+    </div>
+
+    <div class="wash" id="wash">
+      <div class="eyebrow">「洗ったらだめになる」と思っていませんか</div>
+      <h3><span class="em">約100回</span>洗っても、<br>ここちドライのまま。</h3>
+      <div class="machines" id="machines"></div>
+      <div class="washbar"><div class="wfill" id="washFill"></div>
+        <span style="left:0">1回目</span><span style="left:50%">50回目</span><span style="left:100%">100回目</span></div>
+      <div class="washnums">
+        <div><b>15日に1回</b><span>15枚を順番にはいた時、<br>1枚を洗う回数</span></div>
+        <div><b>約4年</b><span>15枚セットを<br>100回洗うまで</span></div>
+        <div><b>約3,000枚</b><span>その間に買わずに済む<br>紙パンツ</span></div>
+      </div>
+      <p class="fn">※ 1日2枚の紙パンツを、ここちドライ1枚に置き換えた場合の目安です。</p>
+    </div>
+
+  </div>
+</section>
+<!-- ============ ここちドライとは ============ -->
+<section class="meet np soft">
+  <div class="wrap">
+    <div class="eyebrow">ここちドライとは</div>
+    <h2 class="sec">「見た目」から設計した、<br><span class="em">はじめての吸水ショーツ</span></h2>
+    <p class="lead center">ここちドライは、あなたに何かを我慢させる下着ではありません。吸水層を最初からショーツに縫い込み、いつもの下着の形のまま、コップ1杯分を黙って受け止めます。</p>
+    <div class="meetgrid">
+      <div class="meetimg"><img src="img/meet-mirror.webp" alt="鏡で後ろ姿を確かめる女性"><div class="kd-bubble">え、ほんとに<br>分からない…！</div></div>
+      <div class="meetlist">
+        <div><span class="mi">🧵</span><b>貼らない。重ねない。縫い込んである。</b><p>ずれる・はみ出す・ガサガサ鳴る。その原因のパッドが、最初からありません。</p></div>
+        <div><span class="mi">👗</span><b>はいた瞬間から、ふつうの下着</b><p>更衣室でも、温泉でも、洗濯物を干す時も。尿もれ用には見えません。</p></div>
+        <div><span class="mi">🧺</span><b>1回買えば、約4年</b><p>約100回洗えます。15枚なら約4年。1回の買い物で、終わりです。</p></div>
+        <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 使い方 ============ -->
+<section class="how np">
+  <div class="wrap">
+    <div class="eyebrow">使い方</div>
+    <h2 class="sec">はくだけ。<br>あとは<span class="em">ここちドライ</span>が<br>やります。</h2>
+    <div class="steps">
+      <div class="step"><img src="img/kokochi-new-perf-4-cotton.webp" alt=""><i>1</i><h4>はく</h4><p>いつもの下着と同じように、はくだけ。パッドを貼る、位置を直す、はもうありません。本当に、はくだけです。</p></div>
+      <div class="step"><img src="img/adv15.webp" alt=""><i>2</i><h4>いつも通り、出かける</h4><p>くしゃみも、立ち上がる瞬間も。受け止めるのはここちドライの仕事です。あなたは、何も気にしなくていい。</p></div>
+      <div class="step"><img src="img/kd-care-34-20260910.webp" alt=""><i>3</i><h4>洗って、また はく</h4><p>夜、洗濯ネットに入れて洗濯機へ。乾いたら、また引き出しへ。買い足しも、ゴミ出しもありません。</p></div>
+    </div>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+
+<!-- ============ 特長（紙パンツが本当はこうあるべきだったもの） ============ -->
+<section class="feats np cream">
+  <div class="wrap">
+    <div class="eyebrow">特長</div>
+    <h2 class="sec">紙パンツに「こうあってほしかった」を、<br><span class="em">全部入れました。</span></h2>
+    <div class="fgrid">
+      <div class="fc"><img src="img/adv12.webp" alt="4層の断面"><h4>4層のアダプタブル吸水</h4><p>肌側の層がすばやく通し、中の層が抱え込み、外側の層で逃がさない。一気に来ても、受け止めます。</p>
+        <ul><li><b>横もれしにくい</b> — 股の全面で受ける</li><li><b>コップ1杯分</b> — 急な尿もれにも</li><li><b>さらっと</b> — 吸った水を肌に戻さない</li></ul></div>
+      <div class="fc"><img src="img/kokochi-new-perf-1-rotate.webp" alt=""><h4>服の上から分からない薄さ</h4><p>吸水層を内蔵しても、普段の下着と変わらない薄さ。細身の服の日も、後ろ姿を気にしなくていい。</p>
+        <ul><li><b>輪郭が出ない</b> — 段差もふくらみもない</li><li><b>音がしない</b> — 紙もビニールも使わない</li><li><b>3色</b> — クラシック・ベージュ・ブラック</li></ul></div>
+      <div class="fc"><img src="img/kokochi-new-perf-4-cotton.webp" alt=""><h4>綿80%のやさしい肌ざわり</h4><p>外側はよく伸びるプレミアムコットン。紙やプラスチック素材で起こりがちな蒸れやかぶれの原因になりにくい。</p>
+        <ul><li><b>蒸れにくい</b> — 通気する綿</li><li><b>かぶれにくい</b> — 紙・ビニールを使わない</li><li><b>よく伸びる</b> — 体の線に沿う</li></ul></div>
+      <div class="fc"><img class="face" src="img/kd-gallery-3-20260910.webp" alt=""><h4>8サイズ、合わなければ交換</h4><p>XSから4XLまで。薬局に置いていない大きいサイズもあります。合わなければ30日以内なら交換無料。</p>
+        <ul><li><b>XS〜4XL</b> — ヒップで選ぶ</li><li><b>交換無料</b> — 30日以内なら</li><li><b>迷ったら</b> — 大きいほうを</li></ul></div>
+      <div class="fc"><img src="img/kd-care-34-20260910.webp" alt=""><h4>約100回洗える</h4><p>洗濯ネットに入れて、いつもの洗濯物と一緒に。15枚を順番にはけば、約4年使えます。</p>
+        <ul><li><b>洗濯機でOK</b> — ネットに入れるだけ</li><li><b>約4年</b> — 15枚セットの目安</li><li><b>買い足しなし</b> — 毎月の出費がなくなる</li></ul></div>
+    </div>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+
+<!-- ============ お財布 ============ -->
+<section class="money np">
+  <div class="wrap">
+    <div class="wallet">
+      <div class="eyebrow">紙パンツを買い続けている方へ</div>
+      <h3>お財布にも、気持ちにも<br><span class="em">紙パンツよりやさしい</span></h3>
+      <div class="vs">
+        <div class="side"><img src="img/cost-paper.webp" alt="紙パンツ"><b>紙パンツ（使い捨て）</b></div>
+        <div class="vsdot">VS</div>
+        <div class="side"><img src="img/cost-kokochi.webp" alt="ここちドライ"><b class="brand">ここちドライ</b></div>
+      </div>
+      <div class="cols">
+        <div class="col paper"><div class="rail">ずっと払い続ける</div>
+          <div class="box b1"><small>6か月</small>約29,200円</div>
+          <div class="box b2"><small>1年</small>約58,400円</div>
+          <div class="box b3"><small>2年</small>約116,800円</div>
+          <div class="box b4"><small>3年</small>約175,200円</div>
+        </div>
+        <div class="col kd"><div class="rail">払うのは最初だけ</div>
+          <div class="box"><small>最初に</small>29,890円</div>
+          <div class="box"><small>1年</small>追加 0円</div>
+          <div class="box"><small>2年</small>追加 0円</div>
+          <div class="box"><small>3年</small>追加 0円</div>
+        </div>
+      </div>
+      <div class="saved"><small>3年で浮くお金</small><b>約145,300円</b></div>
+      <div class="insight small"><div class="ih">知っていましたか <span>♻️</span></div><b>ここちドライ15枚 ＝ 紙パンツ約3,000枚分</b><p>玄関に届く大きな段ボールも、ゴミ袋いっぱいの紙パンツも、もう要りません。</p></div>
+      <p class="replace" hidden>ここちドライ15枚 ＝ <b>紙パンツ約3,000枚分</b><br><span>ゴミ袋に詰める紙パンツも、玄関に届く大きな段ボールも、もう要りません。</span></p>
+      <p class="fn">※ 紙パンツ1枚80円×1日2枚で計算した目安。ここちドライは15枚セット（約100回洗える目安）。</p>
+    </div>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+<section class="life np soft">
+  <div class="wrap">
+    <div class="eyebrow">毎日に、ほっとできる安心を</div>
+    <h2 class="sec">ここちドライのある<br>毎日は、<span class="em">こう変わる</span></h2>
+    <p class="lead">朝の着替えから、友人との旅行まで。紙パンツの恥ずかしさのない、いつもの自分の毎日に戻れます。</p>
+  </div>
+  <div class="kd-slider" data-slider>
+    <button class="nav p" aria-label="前へ" type="button">‹</button>
+    <div class="track">
+      <div class="card"><img src="img/scene-drawer.webp" alt="" loading="lazy"></div>
+      <div class="card"><img src="img/scene-onsen.webp" alt="" loading="lazy"></div>
+      <div class="card"><img src="img/scene-pants.webp" alt="" loading="lazy"></div>
+      <div class="card"><img src="img/scene-lunch.webp" alt="" loading="lazy"></div>
+      <div class="card"><img src="img/scene-yoga.webp" alt="" loading="lazy"></div>
+      <div class="card"><img src="img/scene-travel.webp" alt="" loading="lazy"></div>
+    </div>
+    <button class="nav n" aria-label="次へ" type="button">›</button>
+    <div class="sdots"></div>
+  </div>
+  <div class="wrap">
+    <ul class="outcomes">
+      <li><b>白いパンツも、細身のスカートも選べる</b><span>線も段差も出ないから、服を「隠せるかどうか」で選ばなくていい。</span></li>
+      <li><b>温泉の脱衣所で、友人の隣で着替えられる</b><span>脱いでも普通のショーツ。タオルで隠しながら急いで着替える旅は、もう終わり。</span></li>
+      <li><b>ヨガやジムの更衣室を、避けなくていい</b><span>もこもこした吸水部がないから、習い事も運動も続けられる。</span></li>
+      <li><b>孫を抱っこしても、しゃがんでも、音がしない</b><span>紙もビニールも使っていないから、動くたびにガサガサ鳴らない。</span></li>
+      <li><b>洗濯物を干しても、家族に気づかれない</b><span>ベランダに並ぶのは、いつもの下着と同じ形のショーツだけ。</span></li>
+      <li><b>診察や入院で着替える日も、あわてない</b><span>看護師さんの前でも、介護用品をはいている自分を見せなくていい。</span></li>
+    </ul>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+
+<!-- ============ 専門家と一緒に作った ============ -->
+<section class="pro2">
+  <div class="wrap">
+    <div class="p2hero">
+      <img class="p2photo" src="img/takase.webp" alt="泌尿器科医 高瀬 真紀">
+      <div class="p2text">
+        <div class="eyebrow left">研究と開発の裏づけ</div>
+        <h2 class="p2h">泌尿器科の<br>専門家がすすめる<br><span class="em">ここちドライ</span></h2>
+        <p class="p2lead">尿もれに悩む女性を診てきた泌尿器科の専門機関と共同で開発。<br>「恥ずかしさなしで、治療の時間を過ごしてほしい」という思いから生まれました。</p>
+        <div class="p2name"><b>高瀬 真紀</b>泌尿器科医・開発協力</div>
+      </div>
+    </div>
+    <div class="p2card">
+      <div class="p2seal">泌尿器科<br>専門機関<br><b>共同開発</b></div>
+      <h3>ここちドライをはいた方の実感</h3>
+      <div class="p2bar"><b>92%</b><div><p><strong>服の上から</strong>分からないと感じた</p><i style="--w:92%"></i></div></div>
+      <div class="p2bar"><b>89%</b><div><p><strong>外出の不安</strong>が減った</p><i style="--w:89%"></i></div></div>
+      <div class="p2bar"><b>95%</b><div><p><strong>パッド</strong>を買わなくなった</p><i style="--w:95%"></i></div></div>
+      <div class="p2bar"><b>90%</b><div><p><strong>におい</strong>が気にならなくなった</p><i style="--w:90%"></i></div></div>
+      <div class="p2bar"><b>94%</b><div><p><strong>家族や友人</strong>にすすめたい</p><i style="--w:94%"></i></div></div>
+      <p class="fn">※ ご購入者へのアンケートの集計です。</p>
+    </div>
+    <div class="partners">
+      <div class="ph">共同開発にご協力いただいた専門機関</div>
+      <div class="logos"><div class="run">
+      <img src="img/kokochi-new-partner-1.webp" alt=""><img src="img/kokochi-new-partner-2.webp" alt=""><img src="img/kokochi-new-partner-3.webp" alt=""><img src="img/kokochi-new-partner-4.webp" alt=""><img src="img/kokochi-new-partner-5.webp" alt="">
+      <img src="img/kokochi-new-partner-1.webp" alt=""><img src="img/kokochi-new-partner-2.webp" alt=""><img src="img/kokochi-new-partner-3.webp" alt=""><img src="img/kokochi-new-partner-4.webp" alt=""><img src="img/kokochi-new-partner-5.webp" alt="">
+    </div></div>
+    </div>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+
+<!-- ============ くらべる ============ -->
+<section class="vs2 np cream">
+  <div class="wrap narrow">
+    <div class="eyebrow">くらべてください</div>
+    <h2 class="sec">ここちドライ vs 紙パンツ</h2>
+    <table class="vt">
+      <thead><tr><th></th><th class="us"><span class="uslogo">ここち<br>ドライ</span></th><th class="them"><img src="img/cost-paper.webp" alt=""><span>紙パンツ</span></th></tr></thead>
+      <tbody>
+        <tr><td><span>👗</span>見た目でバレない</td><td class="us">✓</td><td class="them x">✕</td></tr>
+        <tr><td><span>🔇</span>歩いても音がしない</td><td class="us">✓</td><td class="them x">✕</td></tr>
+        <tr><td><span>💧</span>吸水の構造</td><td class="us t">4層</td><td class="them t">使い捨て</td></tr>
+        <tr><td><span>🌿</span>蒸れにくい綿</td><td class="us">✓</td><td class="them x">✕</td></tr>
+        <tr><td><span>💴</span>毎月の出費</td><td class="us t">なし</td><td class="them t">約4,800円</td></tr>
+        <tr><td><span>🔁</span>使える回数</td><td class="us t">約100回</td><td class="them t">1回</td></tr>
+        <tr><td><span>⭐</span>すすめたい</td><td class="us t">94%</td><td class="them t">—</td></tr>
+      </tbody>
+    </table>
+    <p class="fn center">※ 紙パンツの費用は1枚80円×1日2枚の目安。</p>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+<section class="promise">
+  <div class="wrap">
+    <div class="pcard">
+      <div class="tagline">リスクなしのお約束</div>
+      <img class="medal" src="img/medal-30.png" alt="30日間返金保証">
+      <h3>ここちドライを、<br><span class="em">30日間リスクなしで</span>試してください</h3>
+      <p class="lead">30日間、実際にはいてください。洗ってください。外出にも、夜にも、何度でも使ってください。</p>
+      <div class="pbox"><b>はいて、洗ってからでも大丈夫</b><span>未開封じゃなくていいんです。はいて、洗って、合わなければ返してください。</span></div>
+      <div class="pbox y"><b>むずかしい手続きはありません</b><span>ご連絡いただければ、返金まで順番にご案内します。</span></div>
+      <div class="pbox"><b>サイズが合わなかったら？</b><span>体形は人それぞれ。だから30日以内なら、サイズ交換も無料です。</span></div>
+      <div class="dev"><img src="img/takase-face.webp" alt=""><div><p>「はいて、洗って、確かめてください。合わなければ、遠慮なく返してください。」</p><b>高瀬 真紀</b><span>泌尿器科医・開発協力</span></div></div>
+      <div class="why"><b>なぜ、ここまで保証できるのか？</b><span>はいた方の多くが、そのまま使い続けているからです。あなたにも、ようやく「これでいい」と思える下着を、安心して試してほしいと思っています。</span></div>
+      <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 人の声 ============ -->
+<section class="people" style="padding-top:44px">
+  <div class="kd-slider" data-slider>
+    <div class="track">
+      <div class="card"><img src="img/svl-20260910-jp-section-10.webp" alt="" loading="lazy"><div class="b"><div class="q">”</div><div class="st">★★★★★</div><h4>細身の服が好きな方</h4><p>ずっと、お尻が隠れる長い上着しか着られませんでした。これにしてから、ベージュの細身のパンツを買いました。鏡で後ろ姿を何度も確かめる癖がなくなりました。</p><div class="nm">久美子さん　58歳</div></div></div>
+      <div class="card"><img src="img/svl-20260910-jp-section-11.webp" alt="" loading="lazy"><div class="b"><div class="q">”</div><div class="st">★★★★★</div><h4>紙パンツをすすめられていた方</h4><p>娘に「もう紙パンツにしたら」と言われて、売り場まで行って買わずに帰りました。これは届いた箱を開けても、はいても、普通のショーツ。はく時に気持ちが沈みません。</p><div class="nm">和子さん　62歳</div></div></div>
+      <div class="card"><img src="img/svl-20260910-jp-section-17.webp" alt="" loading="lazy"><div class="b"><div class="q">”</div><div class="st">★★★★★</div><h4>温泉が好きな方</h4><p>脱衣所で見られるのが怖くて、友人との温泉旅行を2年断っていました。この春、久しぶりに箱根へ。隣で普通に着替えられたことが、何よりうれしかったです。</p><div class="nm">典子さん　59歳</div></div></div>
+      <div class="card"><img src="img/svl-20260910-jp-section-14.webp" alt="" loading="lazy"><div class="b"><div class="q">”</div><div class="st">★★★★★</div><h4>ヨガ教室に通う方</h4><p>前の吸水ショーツは股がもこもこで、更衣室で着替えるのが嫌でヨガをやめかけていました。これは段差がなく、レギンスの上からも分かりません。</p><div class="nm">洋子さん　60歳</div></div></div>
+      <div class="card"><img src="img/svl-20260910-jp-section-15.webp" alt="" loading="lazy"><div class="b"><div class="q">”</div><div class="st">★★★★★</div><h4>「薄いのに漏れないの？」と疑っていた方</h4><p>こんなに薄くて本当に大丈夫なのか、最初は家で試しました。くしゃみをしても、ズボンに染みませんでした。今は外出の日もこれ一枚です。</p><div class="nm">恵美子さん　57歳</div></div></div>
+    </div>
+    <div class="sdots"></div>
+  </div>
+</section>
+
+<!-- ============ 9. レビュー ============ -->
+<section class="rv" id="reviews" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="sec" style="font-size:24px">お客様の声</h2>
+    <div class="sum"><span class="s">★★★★★</span><b>4.7</b>2,657 件のレビュー</div>
+    <div class="dist">
+      <div>★5<i style="--w:81%"></i>2,153</div>
+      <div>★4<i style="--w:12%"></i>318</div>
+      <div>★3<i style="--w:4%"></i>106</div>
+      <div>★2<i style="--w:1.6%"></i>43</div>
+      <div>★1<i style="--w:1.4%"></i>37</div>
+    </div>
+    <div class="rvgrid" id="rvGrid"></div>
+    <button class="more" id="rvMore" type="button">レビューをもっと読む</button>
+    <div class="cnt" id="rvCnt"></div>
+  </div>
+</section>
+
+<!-- ============ よくある質問（最後のひと押し） ============ -->
+<section class="faq2 np cream">
+  <div class="wrap narrow">
+    <div class="eyebrow">ここちドライ</div>
+    <h2 class="sec">よくある質問</h2>
+    <div class="qa">
+      <details open><summary>はいているのを、本当に人に気づかれませんか？</summary><div>ご購入者へのアンケートでは、92%の方が「服の上から分からない」と答えています。吸水層はショーツに縫い込まれていて、パッドの段差もふくらみも出ません。<br><br>まずは細身のパンツの日に試してみてください。それでも気になるようなら、30日間の返金保証があります。</div></details>
+      <details><summary>ほかの吸水ショーツで失敗しました。何が違いますか？</summary><div>多くの吸水ショーツは、吸水部を厚く重ねて量に備えます。そのぶん、もこもこして「尿もれ用」に見えてしまいます。ここちドライは：<br>1. 見た目から設計している（普通の下着の形のまま）<br>2. 股の全面で受ける（一点で受けないので横もれしにくい）<br>3. 吸った水を肌に戻さない（さらっとしたまま）<br>「洗えるけど、はきたくない」を、最初から作らないようにしています。</div></details>
+      <details><summary>どのくらいの量まで大丈夫ですか？</summary><div>コップ1杯分まで受け止めます。くしゃみ・咳・立ち上がった瞬間など、急な尿もれに備えられます。量が多いと感じる方は、はじめの数日は家で試してから、外出に使ってください。</div></details>
+      <details><summary>においは大丈夫ですか？</summary><div>においは、肌と布の間に水分が残り続けることで時間をかけて強くなります。ここちドライは吸った水を内側に抱え込み、肌に触れる面をさらっと保ちます。湿りが気になった時は、はき替えてください。</div></details>
+      <details><summary>洗い方は？洗うとだめになりませんか？</summary><div>使った後は水ですすぎ、洗濯ネットに入れて洗濯機へ。漂白剤・柔軟剤は使わず、風通しのよい所で干してください。約100回洗えます。15枚を順番にはけば、約4年使えます。</div></details>
+      <details><summary>何枚あればいいですか？</summary><div>いちばん選ばれているのは15枚セットです。毎日はき替えても2週間分あるので、洗濯のタイミングを気にせずに回せます。1枚あたりの値段もいちばん安くなり、洗濯ネットも3個付きます。</div></details>
+      <details><summary>夜や旅行にも使えますか？</summary><div>使えます。寝ている間も、温泉旅行も、友人の家に泊まる日も。紙パンツのように荷物がかさばらず、脱衣所で隠す必要もありません。</div></details>
+      <details><summary>合わなかったら、どうなりますか？</summary><div>はいて、洗ってからでも、到着から30日以内なら返金保証の対象です。サイズが合わなかった時は、30日以内なら無料で交換できます。まずは、安心して試してください。</div></details>
+    </div>
+    <div class="stockline"><i></i>在庫あり ・ 全国送料無料でお届け</div>
+    <a class="btn pri sway" href="#buy" data-go-buy>今だけ40%OFFで試す</a>
+    <div class="gline"><img src="img/medal-30.png" alt="">30日間 返金保証</div>
+  </div>
+</section>
+
+<!-- ============ 10. 締め ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2>下着のことを <span class="em">今日から</span>!</h2>
+    <p>出かける日も、人前で着替える日も。紙パンツの恥ずかしさなしで、いつもの下着のまま備えてください。</p>
+    <a class="btn pri" href="#buy" data-go-buy>この価格で買う</a>
+    <a class="out" href="/pages/contact">お困りですか</a>
+  </div>
+</section>
+
+<div class="sticky" id="sticky">
+  <button class="btn pri" id="stickyBtn" type="button">サイズを選ぶ</button>
+  <div class="sub">30日間返金保証　全国送料無料</div>
+</div>
+
+<div class="modal" id="sizeModal">
+  <div class="in">
+    <h3>サイズ表 <button type="button" data-close>×</button></h3>
+    <table><tr><th>サイズ</th><th>ウエスト(cm)</th><th>ヒップ(cm)</th><th>体重の目安(kg)</th></tr>
+    <tr><td>XS</td><td>56〜61</td><td>81〜86</td><td>〜45</td></tr><tr><td>S</td><td>62〜67</td><td>87〜92</td><td>45〜50</td></tr><tr><td>M</td><td>68〜73</td><td>93〜98</td><td>50〜56</td></tr><tr><td>L</td><td>74〜79</td><td>99〜104</td><td>56〜62</td></tr><tr><td>XL</td><td>80〜85</td><td>105〜110</td><td>62〜69</td></tr><tr><td>2XL</td><td>86〜91</td><td>111〜116</td><td>69〜77</td></tr><tr><td>3XL</td><td>94〜99</td><td>117〜122</td><td>77〜86</td></tr><tr><td>4XL</td><td>100〜105</td><td>123〜128</td><td>86〜95</td></tr></table>
+    <p>ウエスト・ヒップは実寸の目安、体重は一般的な体形からの推定です。2つのサイズで迷う場合は、大きい方をおすすめします。サイズが合わなかったときも、到着後30日以内なら無料でサイズを交換できます。</p>
+  </div>
+</div>
+
+
+<!-- ============ カート（アルコットのカートの作りを、見た目を気にする人向けに） ============ -->
+<div class="kc-ov" id="kcOv" hidden></div>
+<aside class="kc" id="kc" aria-label="カート" aria-hidden="true">
+  <div class="kc-head"><h3>あなたのカート・(<span id="kcCount">0</span>)</h3><button type="button" class="kc-x" data-kc-close aria-label="閉じる">×</button></div>
+  <div class="kc-banner" id="kcBanner">🎉 いい選択です。いちばん人気のセットです</div>
+  <div class="kc-stars"><span>★★★★★</span> 4.7　2,657件のレビュー</div>
+  <div class="kc-ship">おめでとうございます！<b>全国送料無料</b>が適用されました<i></i></div>
+  <div class="kc-body" id="kcBody">
+    <div id="kcItems"></div>
+    <div class="kc-empty" id="kcEmpty" hidden>カートは空です。<button type="button" data-kc-close>セットを選ぶ</button></div>
+    <div class="kc-coupon" id="kcCoupon"></div>
+    <div class="kc-sec" id="kcPowers">
+      <h4>ここちドライの4つのチカラ</h4>
+      <div class="kc-pw">
+        <div><i><svg viewBox="0 0 24 24"><path d="M6 4h12l-1 9c-.4 3-2.6 5-5 5s-4.6-2-5-5z"/></svg></i>服の上から分からない</div>
+        <div><i><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM17 9l4 6M21 9l-4 6"/></svg></i>ガサガサ音がしない</div>
+        <div><i><svg viewBox="0 0 24 24"><path d="M12 3C9 8 6 11 6 15a6 6 0 0 0 12 0c0-4-3-7-6-12z"/></svg></i>コップ1杯分を受け止める</div>
+        <div><i><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="13" r="4"/></svg></i>約100回洗える</div>
+      </div>
+    </div>
+    <div class="kc-sec kc-quote">
+      <img src="img/takase-face.webp" alt="">
+      <div><p>「漏れるより、紙パンツ姿がつらい。<br>診察室の声を、本気で形にしました。<br>好きな服で出かけた、10年前の毎日を。」</p><b>高瀬 真紀</b><span>泌尿器科医・開発協力</span></div>
+    </div>
+    <div class="kc-sec kc-up" id="kcUp">
+      <button type="button" class="kc-arr" data-up="-1" aria-label="前へ">←</button>
+      <div class="kc-uptrack" id="kcUpTrack"></div>
+      <button type="button" class="kc-arr" data-up="1" aria-label="次へ">→</button>
+    </div>
+  </div>
+  <div class="kc-foot">
+    <div class="kc-disc" id="kcDisc" hidden></div>
+    <div class="kc-total"><span>合計</span><em id="kcDay">1日 約5円</em><s id="kcWas"></s><b id="kcTotal">¥0</b></div>
+    <a class="kc-pay" id="kcPay" href="/checkout">🔒 お支払いに進む<small>30日間 返金保証</small></a>
+  </div>
+</aside>
+</div>
+
+<script>
+(function(){
+'use strict';
+/* ===== 変えるならここ ===== */
+var ORDERS_24H = 250;                 // 「◯件のご注文・過去24時間」
+var VMAP = {"XS|クラシック|5":50141155590282,"XS|クラシック|10":50141155623050,"XS|クラシック|15":50141155655818,"XS|ベージュ|5":50141155885194,"XS|ベージュ|10":50141155917962,"XS|ベージュ|15":50141155950730,"XS|ブラック|5":50141155983498,"XS|ブラック|10":50141156016266,"XS|ブラック|15":50141156049034,"S|クラシック|5":50141156081802,"S|クラシック|10":50141156114570,"S|クラシック|15":50141156147338,"S|ベージュ|5":50141156376714,"S|ベージュ|10":50141156409482,"S|ベージュ|15":50141156442250,"S|ブラック|5":50141156475018,"S|ブラック|10":50141156507786,"S|ブラック|15":50141156540554,"M|クラシック|5":50141156573322,"M|クラシック|10":50141156606090,"M|クラシック|15":50141156638858,"M|ベージュ|5":50141156868234,"M|ベージュ|10":50141156901002,"M|ベージュ|15":50141156933770,"M|ブラック|5":50141156966538,"M|ブラック|10":50141156999306,"M|ブラック|15":50141157032074,"L|クラシック|5":50141157064842,"L|クラシック|10":50141157097610,"L|クラシック|15":50141157130378,"L|ベージュ|5":50141157359754,"L|ベージュ|10":50141157392522,"L|ベージュ|15":50141157425290,"L|ブラック|5":50141157458058,"L|ブラック|10":50141157490826,"L|ブラック|15":50141157523594,"XL|クラシック|5":50141157556362,"XL|クラシック|10":50141157589130,"XL|クラシック|15":50141157621898,"XL|ベージュ|5":50141157851274,"XL|ベージュ|10":50141157884042,"XL|ベージュ|15":50141157916810,"XL|ブラック|5":50141157949578,"XL|ブラック|10":50141157982346,"XL|ブラック|15":50141158015114,"2XL|クラシック|5":50141158047882,"2XL|クラシック|10":50141158080650,"2XL|クラシック|15":50141158113418,"2XL|ベージュ|5":50141158342794,"2XL|ベージュ|10":50141158375562,"2XL|ベージュ|15":50141158408330,"2XL|ブラック|5":50141158441098,"2XL|ブラック|10":50141158473866,"2XL|ブラック|15":50141158506634,"3XL|クラシック|5":50141158539402,"3XL|クラシック|10":50141158572170,"3XL|クラシック|15":50141158604938,"3XL|ベージュ|5":50141158834314,"3XL|ベージュ|10":50141158867082,"3XL|ベージュ|15":50141158899850,"3XL|ブラック|5":50141158932618,"3XL|ブラック|10":50141158965386,"3XL|ブラック|15":50141158998154,"4XL|クラシック|5":50141159030922,"4XL|クラシック|10":50141159063690,"4XL|クラシック|15":50141159096458,"4XL|ベージュ|5":50141159325834,"4XL|ベージュ|10":50141159358602,"4XL|ベージュ|15":50141159391370,"4XL|ブラック|5":50141159424138,"4XL|ブラック|10":50141159456906,"4XL|ブラック|15":50141159489674};                       // サイズ|色|枚数 → 商品バリエーションID（本番の /products/kokochidry.js で在庫を上書き）
+var AVAIL = {};
+function KDIMG(n){ return '/img/w/'+n; }
+var SIZES = ['XS','S','M','L','XL','2XL','3XL','4XL'];
+var COLORS = [{k:'クラシック',f:'classic'},{k:'ベージュ',f:'beige'},{k:'ブラック',f:'black'}];
+var TIERS = [
+  {n:15, price:29890, was:49890, nets:3, ribbon:'🔥 いちばん人気 ・ 1枚あたり最安'},
+  {n:10, price:23890, was:39890, nets:2, tag:'洗い替えに'},
+  {n:5,  price:17890, was:29890, nets:1, weak:'1枚あたり15枚セットの約1.8倍。毎日の洗い替えには足りなくなりがちです。'}
+];
+var yen = function(v){ return '¥' + v.toLocaleString('ja-JP'); };
+var st = {size:null, color:'クラシック', n:15};
+var $ = function(s){ return document.querySelector('#kpdp ' + s) || document.querySelector(s); };
+var $$ = function(s){ return Array.prototype.slice.call(document.querySelectorAll('#kpdp ' + s)); };
+var root = (window.Shopify && Shopify.routes && Shopify.routes.root) || '/';
+
+$('#orders').textContent = ORDERS_24H;
+
+/* 在庫は本番の商品データで上書き */
+fetch(root + 'products/kokochidry.js', {cache:'no-store'}).then(function(r){return r.json();}).then(function(p){
+  p.variants.forEach(function(v){ var k=v.option1+'|'+v.option2+'|'+String(v.option3).replace('枚セット',''); VMAP[k]=v.id; AVAIL[v.id]=v.available; });
+  render();
+}).catch(function(){});
+
+/* サイズ */
+var sizesEl = $('#sizes');
+sizesEl.innerHTML = SIZES.map(function(s){return '<button type="button" data-size="'+s+'">'+s+'</button>';}).join('');
+sizesEl.addEventListener('click', function(e){ var b=e.target.closest('[data-size]'); if(!b) return; st.size=b.dataset.size; err(''); render(); });
+
+function heroSrc(c,n){ return '/gen/w/hero-'+c+'-'+n+'-v4.webp'; }
+function tierHTML(t){
+  var c = COLORS.filter(function(x){return x.k===st.color;})[0].f;
+  var per = Math.round(t.price/t.n), perWas = Math.round(t.was/t.n);
+  return '<div class="tier'+(st.n===t.n?' on':'')+'" data-n="'+t.n+'">'
+    + (t.ribbon?'<div class="ribbon">'+t.ribbon+'</div>':'') + (t.tag?'<div class="tag">'+t.tag+'</div>':'')
+    + '<div class="row"><span class="rad"></span><img class="th" src="/img/w/kd-pink-20260910-'+c+'-'+t.n+'.webp" alt="">'
+    + '<div><div class="nm">'+t.n+'枚セット <span class="off">40%OFF</span></div><div class="save">'+yen(t.was-t.price)+'お得</div></div>'
+    + '<div class="pr"><div class="perwas">'+yen(perWas)+'/枚</div><div class="per">'+yen(per)+' <small>/ 枚</small></div><div class="tot">合計 '+yen(t.price)+'</div></div></div>'
+    + (t.weak?'<div class="weak">'+t.weak+'</div>':'')
+    + '<div class="more"><div class="opt" style="margin-top:0"><div class="lab"><span>カラーを選ぶ<span class="cur">'+st.color+'</span></span></div>'
+    + '<div class="colors">'+COLORS.map(function(o){return '<button type="button" data-color="'+o.k+'" class="'+(o.k===st.color?'on':'')+'"><img src="/img/w/kd-pink-20260910-'+o.f+'-5.webp" alt="">'+o.k+'</button>';}).join('')+'</div></div>'
+    + '<div class="note">サイズ '+(st.size?'<b>'+st.size+'</b>':'<b style="color:var(--ac)">未選択（上で選んでください）</b>')+' ・ 洗濯ネット'+t.nets+'個 無料</div></div></div>';
+}
+$('#tiers').addEventListener('click', function(e){
+  var col=e.target.closest('[data-color]'); if(col){ st.color=col.dataset.color; render(); return; }
+  var t=e.target.closest('.tier'); if(t && +t.dataset.n!==st.n){ st.n=+t.dataset.n; render(); }
+});
+
+function giftsHTML(t){
+  var items=[{img:null,l:'全国<br>送料無料',on:true}];
+  for(var i=1;i<=3;i++) items.push({img:'img/kokochi-new-net.webp',l:'洗濯ネット<br>'+i+'個目',on:i<=t.nets,need:i===2?'10枚で':i===3?'15枚で':''});
+  $('#giftCount').textContent = items.filter(function(x){return x.on;}).length + ' / 4';
+  return items.map(function(x){return '<div class="'+(x.on?'':'kd-lock')+'">'+(x.img?'<img src="'+x.img+'" alt="">':'<span style="display:block;font-size:24px;line-height:34px">🚚</span>')+x.l+(x.img?'<s>3,000円</s>':'')+'<em>'+(x.on?'0円':x.need)+'</em></div>';}).join('');
+}
+
+function current(){ if(!st.size) return null; var id=VMAP[st.size+'|'+st.color+'|'+st.n]; return id?{id:id,available:AVAIL[id]!==false}:null; }
+
+function render(){
+  var t = TIERS.filter(function(x){return x.n===st.n;})[0];
+  $$('[data-size]').forEach(function(b){ b.classList.toggle('on', b.dataset.size===st.size); });
+  $('#sizeCur').textContent = st.size || '未選択';
+  $('#tiers').innerHTML = TIERS.map(tierHTML).join('');
+  $('#gifts').innerHTML = giftsHTML(t);
+  $('[data-price]').textContent = yen(t.price);
+  $('[data-was]').textContent = yen(t.was);
+  $('[data-day]').textContent = '1日あたり 約' + Math.round(t.price/t.n/365) + '円';
+  var c = COLORS.filter(function(x){return x.k===st.color;})[0].f;
+  var main = $('#galMain'), want = heroSrc(c,t.n);
+  main.onerror = function(){ main.onerror=null; main.src='/img/w/kd-pink-20260910-'+c+'-'+t.n+'.webp'; var th=document.querySelector('#galThumbs img'); if(th) th.src=main.src; };
+  var fname=function(u){return String(u||'').split('?')[0].split('/').pop().replace(/^kd2-/,'');};
+  if (fname(main.getAttribute('src')) !== fname(want) || (main.complete && !main.naturalWidth)) main.src = want;
+  var galThumb = document.querySelector('#galThumbs img'); if (galThumb) galThumb.src = main.getAttribute('src');
+  if (!busy) {
+    var label = st.size ? 'カートに入れる ・ ' + yen(t.price) : 'サイズを選ぶ';
+    [$('#atc'), $('#stickyBtn')].forEach(function(b){ b.textContent=label; b.classList.toggle('wait', !st.size); });
+  }
+}
+
+function err(m){ var e=$('#buyErr'); e.textContent=m||''; e.hidden=!m; }
+function needSize(){
+  $('#sizeOpt').scrollIntoView({behavior:'smooth',block:'center'});
+  sizesEl.classList.remove('shake'); void sizesEl.offsetWidth; sizesEl.classList.add('shake');
+}
+
+/* ===== カート：アルコットのカートの作り（Shopify の /cart.js を直接読む。登録クーポンは本番の KD_COUPON をそのまま使う） ===== */
+var busy=false,checkoutNav=false,ADD_TIMEOUT=12000,replaceKey=null;
+var SINGLE={handle:'kokochidry-single',price:5490,was:9150,v:{}};
+var NET={id:50169536053386,price:3000};
+function withTimeout(promise,ms,msg){return new Promise(function(res,rej){var t=setTimeout(function(){rej(Error(msg||'timeout'));},ms);promise.then(function(v){clearTimeout(t);res(v);},function(e){clearTimeout(t);rej(e);});});}
+function setLoading(on,direct){var a=$('#atc'),b=$('#buyNow');a.disabled=on;b.disabled=on;if(on&&!direct)a.textContent='カートに追加しています…';b.textContent=(on&&direct)?'購入画面へ移動しています…':'今すぐ購入';}
+async function api(path,body){var r=await withTimeout(fetch(root+path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{cache:'no-store'}),ADD_TIMEOUT,'timeout');var j;try{j=await r.json();}catch(_){throw Error('ただいま混み合っています。少し待ってから、もう一度お試しください。');}if(!r.ok)throw Error(j.description||j.message||'カートを更新できませんでした。');return j;}
+fetch(root+'products/'+SINGLE.handle+'.js').then(function(r){return r.json();}).then(function(p){SINGLE.img={};p.variants.forEach(function(v){SINGLE.v[v.option1+'|'+v.option2]=v.id;if(v.featured_image&&!SINGLE.img[v.option1])SINGLE.img[v.option1]=v.featured_image.src;});}).catch(function(){});
+
+var kc=$('#kc'),kcOv=$('#kcOv'),lastCart=null;
+function openCart(){kcOv.hidden=false;kc.classList.add('open');kc.setAttribute('aria-hidden','false');document.documentElement.style.overflow='hidden';}
+function closeCart(){kc.classList.remove('open');kc.setAttribute('aria-hidden','true');kcOv.hidden=true;document.documentElement.style.overflow='';}
+kcOv.addEventListener('click',closeCart);
+kc.addEventListener('click',function(e){ if(e.target.closest('[data-kc-close]')) closeCart(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&kc.classList.contains('open')) closeCart(); });
+/* ヘッダーのカートの印を押したら、このカートを開く */
+document.addEventListener('click',function(e){var a=e.target.closest('#cart-icon-bubble,a[href="/cart"],.header__icon--cart');if(!a||a.closest('#kpdp'))return;e.preventDefault();e.stopImmediatePropagation();openCart();refreshCart();},true);
+
+function setsOf(item){var m=String(item.variant_title||'').match(/(\d+)枚セット/);return m?+m[1]:0;}
+function colorOf(t){return (COLORS.filter(function(c){return String(t).indexOf(c.k)>=0;})[0]||COLORS[0]);}
+function renderCart(cart){
+  lastCart=cart;
+  var items=cart.items||[], KD=window.KD_COUPON;
+  $('#kcCount').textContent=cart.item_count;
+  var pieces=0,wasTotal=0,biggest=0,hasSingle=false;
+  $('#kcEmpty').hidden=items.length>0; $('#kcPowers').hidden=!items.length; kc.querySelector('.kc-quote').hidden=!items.length;
+  $('#kcItems').innerHTML=items.map(function(it){
+    var n=setsOf(it), single=it.handle===SINGLE.handle, net=it.variant_id===NET.id;
+    var c=colorOf(it.variant_title), size=(String(it.variant_title).match(/\b(\d?XS|XS|S|M|L|XL|2XL|3XL|4XL)\b/)||[])[1]||'';
+    var t=TIERS.filter(function(x){return x.n===n;})[0];
+    var unitWas=t?t.was*100:(single?SINGLE.was*100:it.original_price);
+    wasTotal+=unitWas*it.quantity; pieces+=(n||(single?1:0))*it.quantity; if(n>biggest)biggest=n; if(single)hasSingle=true;
+    var img=n?'/img/w/kd-pink-20260910-'+c.f+'-'+n+'.webp':(it.image||'');
+    var title=n?'ここちドライ '+n+'枚セット':(single?'ここちドライ 単品1枚':it.product_title);
+    var off=unitWas>it.original_price?Math.round((1-it.original_price/unitWas)*100):0;
+    var h='<div class="kc-item"><img src="'+img+'" alt=""><div><h5>'+title+'</h5><div class="v">'+(n||single?c.k+(size?' ・ '+size:''):'')+(it.quantity>1?' × '+it.quantity:'')+'</div>'
+      +(n?'<button type="button" class="chg" data-chg="'+it.key+'">変更する</button>':'<span class="qty"><button type="button" data-q="'+it.key+'" data-d="-1">−</button><span>'+it.quantity+'</span><button type="button" data-q="'+it.key+'" data-d="1">＋</button></span>')
+      +'</div><div class="r">'+(unitWas>it.original_price?'<s>'+yen(unitWas*it.quantity/100)+'</s>':'')+'<b>'+yen(it.original_line_price/100)+'</b>'+(off?'<span class="tag">🏷 '+off+'%お得</span>':'')
+      +'<button type="button" class="del" data-del="'+it.key+'" aria-label="削除"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></button></div></div>';
+    if(t) h+='<div class="kc-gift"><img src="img/kokochi-new-net.webp" alt=""><div><small>購入特典</small><br><b>洗濯ネット ×'+(t.nets*it.quantity)+'</b></div><div class="g0"><s>'+yen(NET.price*t.nets*it.quantity)+'</s><em>0円</em></div></div>';
+    return h;
+  }).join('');
+  /* 帯：選んだセットで言葉を変える。5枚・単品だけの時は15枚への切り替えを見せる */
+  var b=$('#kcBanner'), small=items.filter(function(it){return setsOf(it)===5;})[0];
+  if(!items.length){b.textContent='🌸 誰にも気づかれない毎日を、ここから';}
+  else if(biggest===15){b.textContent='🎉 いい選択です。いちばん人気のセットです';}
+  else if(biggest===10){b.textContent='🎉 いい選択です。洗い替えに困らないセットです';}
+  else if(small){b.innerHTML='💡 あと¥12,000で10枚増えて、1枚¥1,993に <button type="button" data-up15="'+small.key+'">15枚に変える</button>';}
+  else if(hasSingle){b.textContent='💡 セットにすると、1枚あたり最大64%おトクです';}
+  /* 登録特典 */
+  var applied=!!(KD&&KD.isApplied&&KD.isApplied()), eligible=!!(KD&&KD.isEligible&&KD.isEligible());
+  $('#kcCoupon').innerHTML=!items.length?'':(applied?'<span class="ok">✓ メール登録特典 2,000円OFFが適用されています</span>':(eligible?'<span class="ok">✓ メール登録特典は、お支払いの時に適用されます</span>':'メール登録で2,000円OFF　<button type="button" data-coupon-open>受け取る →</button>'));
+  var disc=cart.total_discount||0;
+  $('#kcDisc').hidden=!disc; $('#kcDisc').innerHTML='<span>メール登録特典</span><span>−'+yen(disc/100)+'</span>';
+  $('#kcTotal').textContent=yen(cart.total_price/100);
+  $('#kcWas').textContent=wasTotal>cart.total_price?yen(wasTotal/100):'';
+  $('#kcDay').hidden=!pieces; $('#kcDay').textContent='1日 約'+Math.max(1,Math.round(cart.total_price/100/pieces/365))+'円';
+  $('#kcPay').style.display=items.length?'':'none';
+  renderUpsell(items);
+}
+function renderUpsell(items){
+  var main=items.filter(function(it){return setsOf(it);})[0], track=$('#kcUpTrack');
+  if(!items.length){$('#kcUp').hidden=true;return;} $('#kcUp').hidden=false;
+  var c=main?colorOf(main.variant_title):COLORS[0], size=main?((String(main.variant_title).match(/\b(XS|S|M|L|XL|2XL|3XL|4XL)\b/)||[])[1]||'M'):(st.size||'M');
+  var sid=SINGLE.v[c.k+'|'+size];
+  var cards=[];
+  if(sid) cards.push('<div class="kc-upc"><img src="'+((SINGLE.img&&SINGLE.img[c.k])||'/img/w/kd-pink-20260910-'+c.f+'-5.webp')+'" alt=""><div><h5>外出用に、もう1枚（'+c.k+'・'+size+'）</h5><div class="p">¥5,490<small>バッグに1枚入れておける</small></div><button type="button" data-add="'+sid+'">注文に追加</button></div></div>');
+  cards.push('<div class="kc-upc"><img src="img/kokochi-new-net.webp" alt=""><div><h5>洗濯ネット（追加）</h5><div class="p">¥3,000<small>洗い替えの日に</small></div><button type="button" data-add="'+NET.id+'">注文に追加</button></div></div>');
+  track.innerHTML=cards.join('');
+}
+window.__kcRender=function(c){openCart();renderCart(c);};
+async function refreshCart(){ try{ var cart=await api('cart.js'); renderCart(cart); return cart; }catch(e){} }
+/* ヘッダーのカートの数字も、本番のセクションで描き直す */
+function syncBubble(){ fetch(root+'products/kokochidry?sections=cart-icon-bubble',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){var el=document.getElementById('cart-icon-bubble'); if(el&&j['cart-icon-bubble']){var d=document.createElement('div'); d.innerHTML=j['cart-icon-bubble']; var n=d.querySelector('#cart-icon-bubble')||d.firstElementChild; if(n) el.innerHTML=n.innerHTML;}}).catch(function(){}); }
+async function afterChange(cart){
+  var KD=window.KD_COUPON;
+  renderCart(cart); syncBubble();
+  if(KD&&KD.isEligible&&KD.isEligible()&&cart.item_count){ try{ var c2=await KD.apply({sections:false}); if(c2) renderCart(c2); }catch(_){} }
+}
+kc.addEventListener('click',async function(e){
+  var t=e.target.closest('[data-del],[data-q],[data-add],[data-chg],[data-up15],[data-coupon-open]'); if(!t) return;
+  try{
+    if(t.dataset.couponOpen!==undefined){ closeCart(); if(window.EC_COUPON_UI&&EC_COUPON_UI.open) EC_COUPON_UI.open(); return; }
+    if(t.dataset.del){ afterChange(await api('cart/change.js',{id:t.dataset.del,quantity:0})); return; }
+    if(t.dataset.q){ var it=lastCart.items.filter(function(x){return x.key===t.dataset.q;})[0]; afterChange(await api('cart/change.js',{id:t.dataset.q,quantity:Math.max(0,it.quantity+Number(t.dataset.d))})); return; }
+    if(t.dataset.add){ t.disabled=true; t.textContent='追加しています…'; await api('cart/add.js',{items:[{id:Number(t.dataset.add),quantity:1}]}); afterChange(await api('cart.js')); return; }
+    if(t.dataset.up15){ /* 5枚を、同じ色・サイズの15枚に置き換える */
+      var it5=lastCart.items.filter(function(x){return x.key===t.dataset.up15;})[0];
+      var c=colorOf(it5.variant_title), size=(String(it5.variant_title).match(/\b(XS|S|M|L|XL|2XL|3XL|4XL)\b/)||[])[1];
+      var id15=VMAP[size+'|'+c.k+'|15']; if(!id15) return;
+      t.disabled=true; t.textContent='変えています…';
+      await api('cart/add.js',{items:[{id:id15,quantity:it5.quantity}]}); await api('cart/change.js',{id:it5.key,quantity:0});
+      afterChange(await api('cart.js')); return;
+    }
+    if(t.dataset.chg){ /* 変更する：選び直してもらい、次に入れた時にこの行と入れ替える */
+      var it2=lastCart.items.filter(function(x){return x.key===t.dataset.chg;})[0];
+      replaceKey=it2.key; st.n=setsOf(it2)||st.n; st.color=colorOf(it2.variant_title).k;
+      st.size=(String(it2.variant_title).match(/\b(XS|S|M|L|XL|2XL|3XL|4XL)\b/)||[])[1]||st.size;
+      render(); closeCart(); $('#sizeOpt').scrollIntoView({behavior:'smooth',block:'center'});
+      return;
+    }
+  }catch(err){ alert(err.message||'カートを更新できませんでした。'); refreshCart(); }
+});
+/* お支払いへ：登録済みなら特典を当ててから進む（本番の kokochi-coupon.js が /checkout のリンクを受け持つ） */
+
+async function addToCart(direct, btn){
+  if(busy)return; var v=current();
+  if(!st.size){ needSize(); return; }
+  if(!v||!v.available){err('この組み合わせは在庫切れです。別のサイズ・カラーをお選びください。');return;}
+  busy=true;setLoading(true,direct);err('');
+  var navigating=false, KD=window.KD_COUPON, eligible=!!(KD&&KD.isEligible&&KD.isEligible());
+  try{
+    if(!direct){ openCart(); $('#kcItems').innerHTML='<div class="kc-loading">カートに追加しています…</div>'; }
+    await api('cart/add.js',{items:[{id:v.id,quantity:1}]});
+    if(replaceKey){ try{ await api('cart/change.js',{id:replaceKey,quantity:0}); }catch(_){} replaceKey=null; }
+    if(direct){
+      if(eligible){try{await withTimeout(KD.apply({sections:false}),ADD_TIMEOUT,'coupon timeout');}catch(_){}}
+      navigating=true;checkoutNav=true;location.assign(root+'checkout');return;
+    }
+    await afterChange(await api('cart.js'));
+  }catch(e){ err((e&&e.message)||'カートに追加できませんでした。少し待ってから、もう一度お試しください。'); refreshCart(); }
+  finally{if(!navigating){busy=false;setLoading(false);render();}}
+}
+window.addEventListener('pageshow',function(e){if(e.persisted&&(checkoutNav||!busy)){busy=false;checkoutNav=false;setLoading(false);render();}});
+$('#atc').addEventListener('click',function(){addToCart(false,$('#atc'));});
+$('#buyNow').addEventListener('click',function(){addToCart(true,$('#buyNow'));});
+$('#stickyBtn').addEventListener('click',function(){ if(!st.size){ needSize(); return; } addToCart(false,$('#stickyBtn')); });
+
+/* メール登録の2,000円OFF：本番のクーポン画面をそのまま開く */
+$('#mailOffer').addEventListener('click',function(){
+  if(window.EC_COUPON_UI&&EC_COUPON_UI.open){EC_COUPON_UI.open();return;}
+  var l=document.querySelector('[data-coupon-launcher]'); if(l) l.click();
+});
+
+$$('[data-go-buy]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();$('#buy').scrollIntoView({behavior:'smooth'});});});
+
+/* サイズ表 */
+var modal=$('#sizeModal');
+$$('[data-open-size]').forEach(function(b){b.onclick=function(){modal.classList.add('open');};});
+modal.onclick=function(e){ if(e.target===modal||e.target.closest('[data-close]')) modal.classList.remove('open'); };
+
+/* 画像の並び */
+(function(){
+  var tr=$('#galTrack'), imgs=[].slice.call(tr.children);
+  $('#galDots').innerHTML = imgs.map(function(_,i){return '<i class="'+(i?'':'on')+'"></i>';}).join('');
+  $('#galThumbs').innerHTML = imgs.map(function(im,i){return '<img src="'+im.getAttribute('src')+'" class="'+(i?'':'on')+'" data-i="'+i+'" alt="">';}).join('');
+  tr.addEventListener('scroll',function(){var i=Math.round(tr.scrollLeft/tr.clientWidth); $$('#galDots i').forEach(function(d,j){d.classList.toggle('on',i===j);}); $$('#galThumbs img').forEach(function(d,j){d.classList.toggle('on',i===j);});},{passive:true});
+  $('#galThumbs').onclick=function(e){var i=e.target.dataset.i; if(i!=null) tr.scrollTo({left:tr.clientWidth*i,behavior:'smooth'});};
+})();
+
+/* 残り時間（今日の終わりまで） */
+function tick(){
+  /* 本番の上の帯（セール終了まで）と同じ終わりの時刻を使う。無ければ今日の終わり */
+  var now=new Date(), end=null;
+  try{ var v=parseInt(sessionStorage.getItem('kd_sale_end_v2'),10); if(v>Date.now()) end=new Date(v); }catch(_){}
+  if(!end){ end=new Date(now); end.setHours(24,0,0,0); }
+  var s=Math.max(0,Math.floor((end-now)/1000));
+  var p=function(v){return String(v).padStart(2,'0');}, h=p(Math.floor(s/3600)), m=p(Math.floor(s%3600/60)), ss=p(s%60);
+  $$('[data-h]').forEach(function(e){e.firstChild.nodeValue=h;}); $$('[data-m]').forEach(function(e){e.firstChild.nodeValue=m;}); $$('[data-s]').forEach(function(e){e.firstChild.nodeValue=ss;});
+}
+tick(); setInterval(tick,1000);
+
+/* 短い声（人の写真は1人1回だけ使う） */
+var MINI = [
+  ['svl-20260910-jp-section-09','「こんなに薄くて漏れないの？」と半信半疑でした。くしゃみをしても、染みませんでした。','晴美さん'],
+  ['svl-20260910-jp-section-37','白いパンツを、何年ぶりかで買いました。後ろ姿を確かめる癖がなくなりました。','純子さん'],
+  ['svl-20260910-jp-section-38','紙パンツのガサガサ音が嫌でした。これは歩いても、しゃがんでも音がしません。','節子さん'],
+  ['svl-20260910-jp-section-12','介護用品っぽい物が届くと覚悟していたら、普通のかわいいショーツでした。','由美子さん'],
+  ['svl-20260910-jp-section-40','ヨガの更衣室で、タオルで隠さずに着替えられるようになりました。','佳代子さん'],
+  ['svl-20260910-jp-section-41','他の吸水ショーツは股がもこもこで諦めていました。これは段差が出ません。','直美さん'],
+  ['svl-20260910-jp-section-36','温泉の脱衣所で、友人の隣で普通に着替えられました。','道子さん'],
+  ['svl-20260910-jp-section-39','深ばきのデカパンを想像していましたが、形はいつものショーツと同じでした。','順子さん'],
+  ['svl-20260910-jp-section-43','ベランダに干しても、尿もれ用だとは誰にも分からない見た目です。','明子さん']
+];
+$('#miniTrack').innerHTML = MINI.map(function(x){return '<div class="c"><img src="/img/w/'+x[0]+'.webp" alt="" loading="lazy"><div><p>'+x[1]+'</p><div class="who"><span>★★★★★</span> — '+x[2]+'</div></div></div>';}).join('');
+$('#miniDots').innerHTML = MINI.map(function(_,i){return '<i class="'+(i?'':'on')+'"></i>';}).join('');
+$('#miniTrack').addEventListener('scroll',function(e){var tr=e.target,c=tr.children[0],i=Math.round(tr.scrollLeft/(c.offsetWidth+12)); $$('#miniDots i').forEach(function(d,j){d.classList.toggle('on',i===j);});},{passive:true});
+
+/* スライダー */
+$$('[data-slider]').forEach(function(sl){
+  var tr=sl.querySelector('.track'), cards=[].slice.call(tr.children), dots=sl.querySelector('.sdots');
+  dots.innerHTML = cards.map(function(_,i){return '<i class="'+(i?'':'on')+'"></i>';}).join('');
+  var step=function(){return cards[0].offsetWidth+14;};
+  tr.addEventListener('scroll',function(){var i=Math.round(tr.scrollLeft/step()); [].forEach.call(dots.children,function(d,j){d.classList.toggle('on',i===j);});},{passive:true});
+  var p=sl.querySelector('.nav.p'), n=sl.querySelector('.nav.n');
+  if(p) p.addEventListener('click',function(){tr.scrollBy({left:-step(),behavior:'smooth'});});
+  if(n) n.addEventListener('click',function(){tr.scrollBy({left:step(),behavior:'smooth'});});
+});
+
+/* 比べる */
+(function(){
+  var ba=$('#ba'), inp=ba.querySelector('input');
+  inp.addEventListener('input',function(){ba.classList.remove('hint');ba.style.setProperty('--x',inp.value+'%');});
+  var knob=ba.querySelector('.knob'); if(knob) ba.querySelector('.ln').appendChild(knob);
+  new IntersectionObserver(function(en,ob){ if(!en[0].isIntersecting) return; ob.disconnect(); ba.classList.add('hint');
+    [[300,'30%'],[1000,'70%'],[1700,'50%']].forEach(function(x){ setTimeout(function(){ if(ba.classList.contains('hint')) ba.style.setProperty('--x',x[1]); },x[0]); });
+    setTimeout(function(){ ba.classList.remove('hint'); },2400);
+  },{threshold:.5}).observe(ba);
+  var CAP={1:['紙パンツは、ズボンの上から形が浮き出る','ここちドライなら、輪郭が出ない'],2:['紙パンツの素材で、肌が荒れてしまう','ここちドライなら、綿のやさしい肌ざわり'],3:['外出先でも、もれが気になって楽しめない','ここちドライなら、気にせず思いきり楽しめる']};
+  $('#baTabs').onclick=function(e){var b=e.target.closest('[data-ba]'); if(!b) return; var k=b.dataset.ba;
+    $$('#baTabs button').forEach(function(x){x.classList.toggle('on',x===b);});
+    ba.querySelector('.bef').src='/img/w/kokochi-new-ba-'+k+'-before.webp'; ba.querySelector('.aft').src='/img/w/kokochi-new-ba-'+k+'-after.webp';
+    $('#baCap').innerHTML=CAP[k][0]+'<small>'+CAP[k][1]+'</small>'; inp.value=50; ba.style.setProperty('--x','50%');};
+})();
+
+/* レビュー（写真は購入者がiPhoneで撮った風。顔は写さない。同じ写真は使い回さない） */
+var REV = [
+  ['田中 久子','58歳・細身の服が好き','2026年9月2日','一番の心配は、薄いパンツにラインが出ることでした。ベージュのスキニーをはいて、家族に後ろから見てもらいましたが「何も分からない」と。お尻が隠れる長い上着を、もう選ばなくてよくなりました。','rv-bed-classic5',5],
+  ['山口 節子','61歳・孫の送り迎え','2026年9月1日','紙パンツは、しゃがむたびにガサガサ鳴るのが嫌でした。孫に「何の音？」と聞かれたのが一番こたえました。これは普通のショーツと同じで、抱っこしても音がしません。',null,5],
+  ['佐藤 由美子','57歳','2026年8月31日','「紙パンツにしたら」と言われて、介護用品の売り場まで行って買わずに帰りました。これは届いた箱を開けても、中身は普通の下着。引き出しに、いつもの下着と一緒にしまえます。','rv-parcel',5],
+  ['小川 和代','59歳・ヨガ教室','2026年8月30日','前に買った吸水ショーツは、股の部分だけ分厚くてもこもこ。更衣室で絶対にバレると思い、はかなくなりました。これは段差がなく、レギンスの上からも分かりません。',null,5],
+  ['石田 恵美子','60歳・「薄いと漏れる」と思っていた','2026年8月29日','見た目が普通なぶん、本当に吸うのか疑っていました。最初の3日は家で試して、くしゃみも咳も大丈夫だったので外へ。薄いのに、ズボンまで染みたことは一度もありません。','rv-hand',5],
+  ['中島 洋子','56歳・パッドで蒸れていた','2026年8月28日','パッドを貼っていた頃は、はみ出していないか、ずれていないか、トイレのたびに確かめていました。貼る物がないので、確かめる回数そのものが減りました。',null,5],
+  ['松井 京子','62歳・温泉が好き','2026年8月27日','脱衣所で見られるのが怖くて、温泉を避けていました。これなら脱いでも普通の下着。先月、友人と久しぶりに行けて、隣で普通に着替えられました。','rv-bed-beige',5],
+  ['岡本 道子','58歳・コーラスの練習','2026年8月26日','「年寄りの下着」みたいな形なら返品しようと思っていました。深ばきすぎず、レースもなく、形はいつものショーツ。これなら毎日はけます。',null,5],
+  ['森 久美子','60歳','2026年8月25日','干す時が心配でした。ベランダに干しても、ほかの下着と並んで違和感がありません。夫にも気づかれていないと思います。','rv-hanger',5],
+  ['高木 幸子','63歳','2026年8月24日','ネットで下着を買うのは初めてで、サイズが合わなかったらと不安でした。最初はMで少し小さく、交換してLに。今はぴったりで、ウエストのゴムの跡も付きません。',null,5],
+  ['藤井 真理子','57歳・黒い服が多い','2026年8月23日','黒いパンツやスカートが多いので、黒を選びました。下着の色が透けないのも安心です。2セット目も黒にしました。','rv-bed-black',5],
+  ['村上 静子','61歳','2026年8月22日','においが心配で、人の隣に座るのを避けていました。夕方になっても、さらっとしたまま。気にしすぎていた自分に気づきました。',null,5],
+  ['吉田 春美','59歳・病院の付き添い','2026年8月21日','母の入院の付き添いで、何日も病院に泊まりました。紙パンツを荷物に詰める必要がなく、着替えの時も人目を気にせずに済みました。',null,5],
+  ['長谷川 厚子','64歳','2026年8月20日','娘に見られたくなくて、紙パンツはゴミ袋を二重にして捨てていました。洗えるので、そういう気苦労が全部なくなりました。',null,5],
+  ['西田 則子','62歳','2026年8月19日','はき心地はやわらかいです。私には少し股上が深めでしたが、服の上からは全く分からないので、そのまま使っています。',null,4],
+  ['近藤 千代子','58歳','2026年8月18日','最初は「本当に普通の下着に見えるの？」と疑っていました。はいてみたら、自分で見ても分からないくらいでした。',null,4]
+];
+var shown=8;
+function renderRv(){
+  $('#rvGrid').innerHTML = REV.map(function(r,i){return '<div class="it'+(i>=shown?' hide':'')+'">'+(r[4]?'<div class="ph"><img src="/gen/w/'+r[4]+'.webp" alt="" loading="lazy" onerror="this.parentNode.remove()"></div>':'')+'<div class="b"><h5>'+r[0]+'</h5><div class="who">'+r[1]+'</div><div class="st">'+'★'.repeat(r[5])+'☆'.repeat(5-r[5])+'<em>✓購入者</em></div><div class="d">'+r[2]+'</div><p>'+r[3]+'</p></div></div>';}).join('');
+  $('#rvCnt').textContent = Math.min(shown,REV.length)+' / '+REV.length+'件を表示';
+  $('#rvMore').style.display = shown>=REV.length ? 'none' : '';
+}
+$('#rvMore').onclick=function(){shown+=8; renderRv();};
+renderRv();
+
+/* 帯：1セット分の実幅で折り返す */
+$$('[data-ticker]').forEach(function(run){
+  var orig=run.innerHTML; var w=run.scrollWidth; var reps=Math.ceil((innerWidth*2)/w)+1;
+  run.innerHTML=new Array(reps+1).join(orig);
+  run.style.setProperty('--w', w+'px'); run.style.setProperty('--dur', (w/60)+'s');
+});
+
+/* 固定バー：上のボタンが見えなくなったら出す */
+new IntersectionObserver(function(en){ var e=en[0]; $('#sticky').classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top<0); }).observe($('#atc'));
+
+/* 洗える回数 */
+(function(){
+  var box=$('#machines'); if(!box) return;
+  var icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4.5"/><path d="M7 6.5h2"/></svg>';
+  box.innerHTML=[1,2,3,4,5,6,7,8,9,10].map(function(i){return '<div>'+icon+(i*10)+'回</div>';}).join('');
+  new IntersectionObserver(function(en,ob){ if(!en[0].isIntersecting) return; ob.disconnect();
+    [].forEach.call(box.children,function(d,i){ setTimeout(function(){ d.classList.add('on'); },180*i); });
+    $('#washFill').style.width='100%';
+  },{threshold:.4}).observe(box);
+})();
+
+
+/* ===== 速さ：見えそうになったら先に読む ===== */
+(function(){
+  function near(el,fn,margin){ if(!el) return; if(!('IntersectionObserver' in window)){fn();return;} var ob=new IntersectionObserver(function(en){ if(en[0].isIntersecting){ ob.disconnect(); fn(); } },{rootMargin:margin||'600px 0px'}); ob.observe(el); }
+  function pre(urls){ urls.forEach(function(u){ var i=new Image(); i.decoding='async'; i.src=u; }); }
+  /* 動画：近づいたら読み込んで、押さなくても再生する */
+  var v=document.getElementById('kdVideo');
+  if(v){ v.muted=true; v.setAttribute('muted',''); v.playsInline=true;
+    var play=function(){ try{ var p=v.play(); if(p&&p.catch) p.catch(function(){}); }catch(_){} };
+    near(v,function(){ v.preload='auto'; v.load(); play(); },'400px 0px');
+    if('IntersectionObserver' in window) new IntersectionObserver(function(en){ if(en[0].isIntersecting) play(); },{threshold:.2}).observe(v);
+    document.addEventListener('visibilitychange',function(){ if(!document.hidden) play(); });
+  }
+  /* 比べる：タブの画像を先に読む */
+  near(document.getElementById('ba'),function(){ var u=[]; [1,2,3].forEach(function(k){ ['before','after'].forEach(function(s){ u.push(KDIMG('kokochi-new-ba-'+k+'-'+s+'.webp')); }); }); pre(u); });
+  /* 上の画像：触ったら全部読む／セットと色の画像も先に読む */
+  var tr=document.getElementById('galTrack'), all=function(){ [].forEach.call(tr.querySelectorAll('img[loading]'),function(i){ i.loading='eager'; }); };
+  if(tr){ ['touchstart','pointerdown','scroll'].forEach(function(ev){ tr.addEventListener(ev,all,{once:true,passive:true}); }); }
+  var th=document.getElementById('galThumbs'); if(th) th.addEventListener('pointerenter',all,{once:true});
+  var heroAll=function(){ var u=[]; COLORS.forEach(function(c){ TIERS.forEach(function(t){ u.push(heroSrc(c.f,t.n)); }); }); pre(u); };
+  var tiersEl=document.getElementById('tiers'); if(tiersEl){ ['pointerdown','touchstart'].forEach(function(ev){ tiersEl.addEventListener(ev,heroAll,{once:true,passive:true}); }); }
+  window.addEventListener('load',function(){ setTimeout(function(){ all(); },2500); });
+})();
+
+render();
+})();
+
+</script></body></html>
